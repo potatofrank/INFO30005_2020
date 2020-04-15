@@ -1,9 +1,9 @@
 extends layout
 
 block content
-  h1 COVID-19 Data Of Melbourne
-  h2 Login
-  h3 Error: #{error}
+  h1 Welcome To The Admin System
+  h2 Please Login
+
 
   form(method='POST' action="/users/login")
     div
@@ -13,3 +13,5 @@ block content
       label Password:
       input(type='password', name='password')
     button(type='submit') Login
+
+  h3 #{error}
