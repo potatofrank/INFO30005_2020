@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('team-ultra-protection:server');
+var debug = require('debug')('info30005:server');
 var http = require('http');
 
 /**

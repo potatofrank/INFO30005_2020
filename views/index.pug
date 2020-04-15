@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 COVID-19 Data Of Melbourne
+  h2 Login
+  h3 Error: #{error}
+
+  form(method='POST' action="/users/login")
+    div
+      label User Name:
+      input(type='text', placeholder='Enter username' name='username')
+    div
+      label Password:
+      input(type='password', name='password')
+    button(type='submit') Login
