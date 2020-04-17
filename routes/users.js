@@ -22,7 +22,7 @@ router.post('/login',function (req,res,next){
     res.render('users',{username: 'Hello admin, Please enter the data'});
   }
   else {
-    res.render('index',{error: 'Error: Please enter valid username or password !!!'});
+    res.render('loginPage',{error: 'Error: Please enter valid username or password !!!'});
   }
 });
 
