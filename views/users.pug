@@ -2,3 +2,93 @@ extends layout
 
 block content
     h1 #{username}
+    h2 Submit New Case Information
+    form(name 'Case Info')
+        fieldset
+            legend Case Info
+
+            |         ID:
+            input(type = 'text',name = 'ID')
+            br
+            br
+
+            |         Gender:
+            select(name = 's1')
+                option(selected='') Gender
+                option(value = 'Male') Male
+                option(value = 'Female') Female
+                option(value = 'Other') Other
+            br
+            br
+
+            |         age:
+            input(type = 'text',name = 'age')
+            br
+            br
+
+            p Symptom:
+            p
+            | Fever:
+            input(type='checkbox',name='symptom',value='fever')
+            |    Dry Cough:
+            input(type='checkbox',name='symptom',value='Dry Cough')
+            |    Tiredness:
+            input(type='checkbox',name='symptom',value='Tiredness')
+            |    Aches and Pain:
+            input(type='checkbox',name='symptom',value='Aches and Pains')
+            |    Running Nose:
+            input(type='checkbox',name='symptom',value='Running Nose')
+            |    Diarrhoea:
+            input(type='checkbox',name='symptom',value='Diarrhoea')
+            |    Nasal Congestion:
+            input(type='checkbox',name='symptom',value='Nasal Congestion')
+            |    Sore throat:
+            input(type='checkbox',name='symptom',value='Sore throat')
+            br
+            br
+
+            //select(name = 's2',multiple='multiple')
+                option(value = 'Fever') Fever
+                option(value = 'Dry Cough') Dry Cough
+                option(value = 'Tiredness') Tiredness
+                option(value = 'Aches and Pains') Aches and Pains
+                option(value = 'Running Nose') Running Nose
+                option(value = 'Diarrhoea') Diarrhoea
+                option(value = 'Nasal Congestion') Nasal Congestion
+                option(value = 'Sore throat') Sore throat//
+
+            |         Confirm Date:
+            input(type = 'text', placeholder = 'dd.mm.yyyy', name = 'ConfirmDate')
+            br
+            br
+
+            |         Living Suburbs and Postcodes
+            select(name = 's3')
+                option(selected = '') Living Suburbs and Postcodes
+                option(value = 'Carlton 3053') Carlton 3053
+                option(value = 'Carlton North 3054') Carlton North 3054
+                option(value = 'Docklands 3008') Docklands 3008
+                option(value = 'East Melbourne 3002') East Melbourne 3002
+                option(value = 'Flemington and Kensington 3031') Flemington and Kensington 3031
+                option(value = 'Melbourne 3000 and 3004') Melbourne 3000 and 3004
+                option(value = 'North Melbourne 3051') North Melbourne 3051
+                option(value = 'Parkville 3052') Parkville 3052
+                option(value = 'Port Melbourne 3207') Port Melbourne 3207
+                option(value = 'Southbank and South Wharf 3006') Southbank and South Wharf 3006
+                option(value = 'South Yarra - west 3141') South Yarra - west 3141
+                option(value = 'West Melbourne 3003') West Melbourne 3003
+            br
+            br
+            input(type = 'submit' value='Submit')
+            br
+            br
+        br
+        br
+
+
+
+
+
+
+
+
