@@ -5,7 +5,7 @@ block content
     h2 Submit New Case Information
     form(name 'Case Info')
         fieldset
-            legend Case Info
+            legend Single Case Information
 
             |         ID:
             input(type = 'text',name = 'ID')
@@ -62,21 +62,70 @@ block content
             br
             br
 
-            |         Living Suburbs and Postcodes
+            |         Living City
             select(name = 's3')
-                option(selected = '') Living Suburbs and Postcodes
-                option(value = 'Carlton 3053') Carlton 3053
-                option(value = 'Carlton North 3054') Carlton North 3054
-                option(value = 'Docklands 3008') Docklands 3008
-                option(value = 'East Melbourne 3002') East Melbourne 3002
-                option(value = 'Flemington and Kensington 3031') Flemington and Kensington 3031
-                option(value = 'Melbourne 3000 and 3004') Melbourne 3000 and 3004
-                option(value = 'North Melbourne 3051') North Melbourne 3051
-                option(value = 'Parkville 3052') Parkville 3052
-                option(value = 'Port Melbourne 3207') Port Melbourne 3207
-                option(value = 'Southbank and South Wharf 3006') Southbank and South Wharf 3006
-                option(value = 'South Yarra - west 3141') South Yarra - west 3141
-                option(value = 'West Melbourne 3003') West Melbourne 3003
+                option(selected = '') Living City
+                option(value = 'City of Melbourne') City of Melbourne
+                option(value = 'City of Port Phillip') City of Port Phillip
+                option(value = 'City of Yarra') City of Yarra
+                option(value = 'City of Banyule') City of Banyule
+                option(value = 'City of Darebin') City of Darebin
+                option(value = 'City of Hume') City of Hume
+                option(value = 'City of Moreland') City of Moreland
+                option(value = 'Shire of Nillumbik') Shire of Nillumbik
+                option(value = 'City of Whittlesea') City of Whittlesea
+                option(value = 'City of Boroondara') City of Boroondara
+                option(value = 'City of Knox') City of Knox
+                option(value = 'City of Manningham') City of Manningham
+                option(value = 'City of Maroondah') City of Maroondah
+                option(value = 'City of Whitehorse') City of Whitehorse
+                option(value = 'Shire of Yarra Ranges') Shire of Yarra Ranges
+                option(value = 'City of Bayside') City of Bayside
+                option(value = 'City of Casey') City of Casey
+                option(value = 'City of Greater Dandenong') City of Greater Dandenong
+                option(value = 'City of Frankston') City of Frankston
+                option(value = 'City of Glen Eira') City of Glen Eira
+                option(value = 'City of Kingston') City of Kingston
+                option(value = 'City of Monash') City of Monash
+                option(value = 'Shire of Mornington Peninsula') Shire of Mornington Peninsula
+                option(value = 'City of Stonnington') City of Stonnington
+                option(value = 'City of Brimbank') City of Brimbank
+                option(value = 'City of Hobsons Bay') City of Hobsons Bay
+                option(value = 'City of Maribyrnong') City of Maribyrnong
+                option(value = 'City of Melton') City of Melton
+                option(value = 'City of Moonee Valley') City of Moonee Valley
+                option(value = 'City of Wyndham') City of Wyndham
+            br
+            br
+
+            input(type = 'submit' value='Submit')
+            br
+            br
+        br
+        br
+    br
+    br
+
+    form(name 'Update data')
+        fieldset
+            legend Update Total Case Information
+            |        Accumulate Confirmed Case：
+            input(type = 'text',placeholder = 'digit', name = 'Accumulate Confirmed Case')
+            br
+            br
+
+            |        Exist Confirmed Case:
+            input(type = 'text', placeholder = 'digit', name = 'Exist Confirmed Case')
+            br
+            br
+
+            |        Death:
+            input(type = 'text', placeholder = 'digit', name = 'Death')
+            br
+            br
+
+            |        Cured Case:
+            input(type = 'text', placeholder = 'digit', name = 'Cured Case')
             br
             br
             input(type = 'submit' value='Submit')
@@ -84,6 +133,9 @@ block content
             br
         br
         br
+    br
+    br
+
 
 
 
