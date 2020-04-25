@@ -2,132 +2,127 @@ extends layout
 
 block content
     h1 #{username}
-    h2 Submit New Case Information
-    form(name 'Case Info')
-        fieldset
-            legend Single Case Information
 
-            |         ID:
-            input(type = 'text',name = 'ID')
-            br
-            br
+    section.insert
+        h2 Submit New Single Case Information
+        form(name 'Case Info',action='/insert',method='post')
+            fieldset
+                legend Single Case Information
 
-            |         Gender:
-            select(name = 's1')
-                option(selected='') Gender
-                option(value = 'Male') Male
-                option(value = 'Female') Female
-                option(value = 'Other') Other
-            br
-            br
+                |         ID:
+                input(type = 'text',name = 'ID')
+                br
+                br
 
-            |         age:
-            input(type = 'text',name = 'age')
-            br
-            br
+                |         Gender:
+                select(name = 's1')
+                    option(selected='') Gender
+                    option(value = 'Male') Male
+                    option(value = 'Female') Female
+                    option(value = 'Other') Other
+                br
+                br
 
-            p Symptom:
-            p
-            | Fever:
-            input(type='checkbox',name='symptom',value='fever')
-            |    Dry Cough:
-            input(type='checkbox',name='symptom',value='Dry Cough')
-            |    Tiredness:
-            input(type='checkbox',name='symptom',value='Tiredness')
-            |    Aches and Pain:
-            input(type='checkbox',name='symptom',value='Aches and Pains')
-            |    Running Nose:
-            input(type='checkbox',name='symptom',value='Running Nose')
-            |    Diarrhoea:
-            input(type='checkbox',name='symptom',value='Diarrhoea')
-            |    Nasal Congestion:
-            input(type='checkbox',name='symptom',value='Nasal Congestion')
-            |    Sore throat:
-            input(type='checkbox',name='symptom',value='Sore throat')
-            br
-            br
+                |         Age:
+                input(type = 'text',name = 'age')
+                br
+                br
 
-            //select(name = 's2',multiple='multiple')
-                option(value = 'Fever') Fever
-                option(value = 'Dry Cough') Dry Cough
-                option(value = 'Tiredness') Tiredness
-                option(value = 'Aches and Pains') Aches and Pains
-                option(value = 'Running Nose') Running Nose
-                option(value = 'Diarrhoea') Diarrhoea
-                option(value = 'Nasal Congestion') Nasal Congestion
-                option(value = 'Sore throat') Sore throat//
+                p Symptom:
+                p
+                | Fever:
+                input(type='checkbox',name='symptom',value='Fever')
+                |    Dry Cough:
+                input(type='checkbox',name='symptom',value='Dry Cough')
+                |    Tiredness:
+                input(type='checkbox',name='symptom',value='Tiredness')
+                |    Aches and Pain:
+                input(type='checkbox',name='symptom',value='Aches and Pains')
+                |    Running Nose:
+                input(type='checkbox',name='symptom',value='Running Nose')
+                |    Diarrhoea:
+                input(type='checkbox',name='symptom',value='Diarrhoea')
+                |    Nasal Congestion:
+                input(type='checkbox',name='symptom',value='Nasal Congestion')
+                |    Sore throat:
+                input(type='checkbox',name='symptom',value='Sore throat')
+                br
+                br
 
-            |         Confirm Date:
-            input(type = 'text', placeholder = 'dd.mm.yyyy', name = 'ConfirmDate')
-            br
-            br
+                |         Confirm Date:
+                input(type = 'text', placeholder = 'dd.mm.yyyy', name = 'ConfirmDate')
+                br
+                br
 
-            |         Living City
-            select(name = 's3')
-                option(selected = '') Living City
-                option(value = 'City of Melbourne') City of Melbourne
-                option(value = 'City of Port Phillip') City of Port Phillip
-                option(value = 'City of Yarra') City of Yarra
-                option(value = 'City of Banyule') City of Banyule
-                option(value = 'City of Darebin') City of Darebin
-                option(value = 'City of Hume') City of Hume
-                option(value = 'City of Moreland') City of Moreland
-                option(value = 'Shire of Nillumbik') Shire of Nillumbik
-                option(value = 'City of Whittlesea') City of Whittlesea
-                option(value = 'City of Boroondara') City of Boroondara
-                option(value = 'City of Knox') City of Knox
-                option(value = 'City of Manningham') City of Manningham
-                option(value = 'City of Maroondah') City of Maroondah
-                option(value = 'City of Whitehorse') City of Whitehorse
-                option(value = 'Shire of Yarra Ranges') Shire of Yarra Ranges
-                option(value = 'City of Bayside') City of Bayside
-                option(value = 'City of Casey') City of Casey
-                option(value = 'City of Greater Dandenong') City of Greater Dandenong
-                option(value = 'City of Frankston') City of Frankston
-                option(value = 'City of Glen Eira') City of Glen Eira
-                option(value = 'City of Kingston') City of Kingston
-                option(value = 'City of Monash') City of Monash
-                option(value = 'Shire of Mornington Peninsula') Shire of Mornington Peninsula
-                option(value = 'City of Stonnington') City of Stonnington
-                option(value = 'City of Brimbank') City of Brimbank
-                option(value = 'City of Hobsons Bay') City of Hobsons Bay
-                option(value = 'City of Maribyrnong') City of Maribyrnong
-                option(value = 'City of Melton') City of Melton
-                option(value = 'City of Moonee Valley') City of Moonee Valley
-                option(value = 'City of Wyndham') City of Wyndham
-            br
-            br
+                |         Living City
+                select(name = 's3')
+                    option(selected = '') Living City
+                    option(value = 'City of Melbourne') City of Melbourne
+                    option(value = 'City of Port Phillip') City of Port Phillip
+                    option(value = 'City of Yarra') City of Yarra
+                    option(value = 'City of Banyule') City of Banyule
+                    option(value = 'City of Darebin') City of Darebin
+                    option(value = 'City of Hume') City of Hume
+                    option(value = 'City of Moreland') City of Moreland
+                    option(value = 'Shire of Nillumbik') Shire of Nillumbik
+                    option(value = 'City of Whittlesea') City of Whittlesea
+                    option(value = 'City of Boroondara') City of Boroondara
+                    option(value = 'City of Knox') City of Knox
+                    option(value = 'City of Manningham') City of Manningham
+                    option(value = 'City of Maroondah') City of Maroondah
+                    option(value = 'City of Whitehorse') City of Whitehorse
+                    option(value = 'Shire of Yarra Ranges') Shire of Yarra Ranges
+                    option(value = 'City of Bayside') City of Bayside
+                    option(value = 'City of Casey') City of Casey
+                    option(value = 'City of Greater Dandenong') City of Greater Dandenong
+                    option(value = 'City of Frankston') City of Frankston
+                    option(value = 'City of Glen Eira') City of Glen Eira
+                    option(value = 'City of Kingston') City of Kingston
+                    option(value = 'City of Monash') City of Monash
+                    option(value = 'Shire of Mornington Peninsula') Shire of Mornington Peninsula
+                    option(value = 'City of Stonnington') City of Stonnington
+                    option(value = 'City of Brimbank') City of Brimbank
+                    option(value = 'City of Hobsons Bay') City of Hobsons Bay
+                    option(value = 'City of Maribyrnong') City of Maribyrnong
+                    option(value = 'City of Melton') City of Melton
+                    option(value = 'City of Moonee Valley') City of Moonee Valley
+                    option(value = 'City of Wyndham') City of Wyndham
+                br
+                br
 
-            input(type = 'submit' value='Submit')
+                input(type = 'submit' value='Submit')
+                br
+                br
             br
             br
         br
         br
-    br
-    br
 
+
+    h3 Update Total Case Information
     form(name 'Update data')
         fieldset
             legend Update Total Case Information
-            |        Accumulate Confirmed Case：
-            input(type = 'text',placeholder = 'digit', name = 'Accumulate Confirmed Case')
+            |        Accumulate Confirmed Cases：
+            input(type = 'text',placeholder = 'digit', name = 'Accumulate Confirmed Cases')
             br
             br
 
-            |        Exist Confirmed Case:
-            input(type = 'text', placeholder = 'digit', name = 'Exist Confirmed Case')
+            |        Exist Confirmed Cases:
+            input(type = 'text', placeholder = 'digit', name = 'Exist Confirmed Cases')
             br
             br
 
-            |        Death:
-            input(type = 'text', placeholder = 'digit', name = 'Death')
+            |        Deaths:
+            input(type = 'text', placeholder = 'digit', name = 'Deaths')
             br
             br
 
-            |        Cured Case:
-            input(type = 'text', placeholder = 'digit', name = 'Cured Case')
+            |        Cured Cases:
+            input(type = 'text', placeholder = 'digit', name = 'Cured Cases')
             br
             br
+
             input(type = 'submit' value='Submit')
             br
             br
