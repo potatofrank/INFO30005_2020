@@ -5,10 +5,10 @@
 
 ## Contributors
 
--Yichao Yao <yichaoy1@student.unimelb.edu.au>
--Keyue Huang <keyueh@student.unimelb.edu.au>
--Haocong Ceng <haocongc@student.unimelb.edu.au>
--Xuelun Wang <xuelunw@student.unimelb.edu.au>
+-Yichao Yao <yichaoy1@student.unimelb.edu.au> <br />
+-Keyue Huang <keyueh@student.unimelb.edu.au> <br />
+-Haocong Ceng <haocongc@student.unimelb.edu.au> <br />
+-Xuelun Wang <xuelunw@student.unimelb.edu.au> <br />
 
 ## App Url
 [https://ultraprotection.herokuapp.com/]
