@@ -20,7 +20,7 @@ var createTotalCase = function(req, res, next) {
     var data = new totalCase(item);
     data.save();
 
-    res.redirect('/');
+    res.render('admin', {username: 'Hello admin, Please enter the data'});
 };
 
 var updateTotalCase = function(req, res, next) {
@@ -42,8 +42,9 @@ var updateTotalCase = function(req, res, next) {
 
 var deleteTotalCase = function(req, res, next) {
     var id = req.body.id;
-    totalCase.findByIdAndRemove(id).exec();
-    res.redirect('/');
+    console.log(id);
+    totalCase.findOneAndDelete(id).exec();
+    res.render('admin', {username: 'Hello admin, Please enter the data'});
 };
 
 module.exports.findAllTotalCase = findAllTotalCase;

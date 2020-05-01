@@ -5,7 +5,7 @@ block content
 
     section.insert
     h2 Add New Single Case Info
-    form(action='insertSingle',method='post',name='singleCase')
+    form(action='/admin/insertSingle',method='post',name='singleCase')
         fieldset
             legend Single Case Information
             br
@@ -98,11 +98,12 @@ block content
     br
 
 
+
     section.delete
-    h4 Delete a Single Case
-    form(action='deleteSingle',method='post',name='singleCaseDelete')
+    h2 Delete a Single Case
+    form(action='/admin/deleteSingle',method='post',name='singleCaseDelete')
         fieldset
-            legend Single Case Info
+            legend Single Case ID
             br
             div.form-group
                 label(for='id') ID
@@ -110,3 +111,17 @@ block content
             br
             button(type='submit') DELETE
 
+    br
+    br
+
+    section.delete
+    h2 Delete a Total Case
+    form(action='/admin/deleteSingle',method='post',name='singleCaseDelete')
+        fieldset
+            legend Total Case ID
+            br
+            div.form-group
+                label(for='_id') ID
+                input#_id(type='text', name='id')
+                br
+                button(type='submit') DELETE
