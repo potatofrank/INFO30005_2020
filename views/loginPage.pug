@@ -5,18 +5,12 @@ html
     link(rel='stylesheet', href='/stylesheet/loginPage.css')
   body
 
-  block content
+  .content
+    #formContent
     h1 Welcome To The Admin System
     h2 Please Login
 
-
     form(method='POST' action="/users/login")
-      div
-        label User Name:
-        input(type='text', placeholder='Enter username' name='username')
-      div
-        label Password:
-        input(type='password', name='password')
-      button(type='submit') Login
-
-    h3 #{error}
+        input#login(type='text', name='login', placeholder='Username')
+        input#password(type='text', name='login', placeholder='Password')
+        input(type='submit', value='Log In')
