@@ -13,9 +13,25 @@ body {
     background: #f3f5f9;
 }
 
+.header{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    padding: 5px;
+    box-shadow:
+            0 3.5px 3.6px rgba(0, 0, 0, 0.084),
+            0 9.6px 10px rgba(0, 0, 0, 0.12),
+            0 23.2px 24.1px rgba(0, 0, 0, 0.156),
+            0 77px 80px rgba(0, 0, 0, 0.24);
+}
+.header h2{
+    padding-left: 150px;
+    padding-top: 10px;
+
+}
 
 .mapdiv{
-    width: 50%;
+    width: 100%;
     margin: auto;
 }
 
@@ -30,15 +46,33 @@ body {
 
 .wrapper .sidebar{
     position: fixed;
-    width: 200px;
+    width: 150px;
     height: 100%;
-    background: #1bc8d7;
+    background: #ffffff;
     padding: 30px 0;
+}
+.sidebar{
+    position: relative;
+    box-shadow:
+            0 3.5px 3.6px rgba(0, 0, 0, 0.084),
+            0 9.6px 10px rgba(0, 0, 0, 0.12),
+            0 23.2px 24.1px rgba(0, 0, 0, 0.156),
+            0 77px 80px rgba(0, 0, 0, 0.24);
+}
+.sidebar:before,
+.sidebar:after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(0,0,0,8);
+    top: 50%;
+    bottom: 0;
+    left: 10px;
+    border-radius:100px;
 }
 
 .wrapper .sidebar h2{
-    color: #fff;
-    text-transform: uppercase;
+    color: #000000;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -50,7 +84,7 @@ body {
 }
 
 .wrapper .sidebar ul li a{
-    color: #bdb8d7;
+    color: rgba(7, 7, 7, 0.49);
     display: block;
 
 }
@@ -61,7 +95,7 @@ body {
 }
 
 .wrapper .sidebar ul li:hover{
-    background: #594f8d;
+    background: #0becd9;
 }
 
 .wrapper .sidebar ul li:hover a{

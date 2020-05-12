@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-cale=1')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/homepage.css')
+    title Team Ultra Protection
+    script(src='https://kit.fontawesome.com/d821761733.js', crossorigin='anonymous')
+  body
+    .header
+      h2 Team Ultra Protection
+    .wrapper
+      .sidebar
+        h2 M A I N
+          ul
+            li
+              a(href='/Home')
+                i.fas.fa-home
+                |   Home
+            li
+              a(href='/log')
+                i.fas.fa-user
+                |   Login
+
+            li
+              a(href='/contact')
+                i.fas.fa-id-card
+                |   Contact Us
+            li
+              a(href='#')
+                i.fas.fa-chart-line
+                |   Charts
+          .social_media
+            a(href='#')
+              i.fab.fa-facebook-square
+            a(href='#')
+              i.fab.fa-twitter-square
+            a(href='#')
+              i.fab.fa-instagram
+      block content

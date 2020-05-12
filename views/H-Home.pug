@@ -1,50 +1,7 @@
-doctype html
-html(lang='en')
-    head
-        meta(charset='UTF-8')
-        meta(name='viewport', content='width=device-width, initial-cale=1')
-        link(rel='stylesheet', type='text/css', href='/stylesheets/homepage.css')
-        title Team Ultra Protection
-        script(src='https://kit.fontawesome.com/d821761733.js', crossorigin='anonymous')
-    body
-        .wrapper
-            .sidebar
-                h2 Sidebar
-                    ul
-                        li
-                            a(href='#')
-                                i.fas.fa-home
-                                | Home
-                        li
-                            a(href='/log')
-                                i.fas.fa-user
-                                | Login
+extends H-layout
 
-                        li
-                            a(href='#')
-                                i.fas.fa-table
-                                | Fill in
-                        li
-                            a(href='#')
-                                i.fas.fa-chart-line
-                                | Charts
-                    .social_media
-                        a(href='#')
-                            i.fab.fa-facebook-square
-                        a(href='#')
-                            i.fab.fa-twitter-square
-                        a(href='#')
-                            i.fab.fa-instagram
-
+block content
             .main_content
-                h2 Cov-19 Information website founded by:
-                h2 Yichao Yao
-                h2 Keyue Huang
-                h2 Xuelun Wang
-                h2 Haocong Chen
-                br
-                br
-
                 fieldset
                     legend Case Overview
                     div
