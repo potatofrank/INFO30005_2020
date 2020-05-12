@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Team Ultra Protection' });
 });
 
-router.post('/log',function (req,res,next) {
+router.get('/log',function (req,res,next) {
   res.render('loginPage', { title: 'Admin Login' });
 });
 

@@ -6,9 +6,9 @@ router.post('/login',function (req,res,next){
 
   const username =  req.body.username;
   var loginResult = login(username, req.body.password);
-
   if(loginResult){
     res.render('admin',{username: 'Hello admin, Please enter the data'});
+
   }
   else {
     res.render('loginPage',{error: 'Error: Please enter valid username or password !!!'});
