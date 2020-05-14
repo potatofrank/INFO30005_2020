@@ -3,23 +3,21 @@ extends H-layout
 block content
             .main_content
                 .table
-                    fieldset
-                        legend Case Overview
-                        form(method='get',action='/get-dataTotal')
-                            each val in totalCases
-                                div
-                                    table.center
-                                        tr
-                                            th Accumulate Confirmed Cases
-                                            th Exist Confirmed Cases
-                                            th Deaths
-                                            th Cured Cases
-                                        tr
+                    form(method='get',action='/Home#')
+                        fieldset
+                            legend Case Overview
+                                table.center
+                                    tr
+                                        th Accumulate Confirmed Cases
+                                        th Exist Confirmed Cases
+                                        th Deaths
+                                        th Cured Cases
+                                    tr
 
-                                            td #{val.Accumulate_Confirmed_Cases}
-                                            td #{val.Current_Existing_Cases}
-                                            td #{val.Accumulate_Deaths}
-                                            td #{val.Accumulate_Cured_Cases}
+                                        td #{Accumulate_Confirmed_Cases}
+                                        td #{Current_Existing_Cases}
+                                        td #{Accumulate_Deaths}
+                                        td #{Accumulate_Cured_Cases}
                 br
                 br
                 .map

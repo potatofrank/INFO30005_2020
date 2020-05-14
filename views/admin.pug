@@ -3,133 +3,144 @@ html
     head
         title= title
         link(rel='stylesheet', href='/stylesheets/admin.css')
-    h1 #{username}
+    body
+        h1 #{username}
 
-    section.get
-    h2 Get All Single Case
-    form(method = 'get', action = '/admin/get-SingleDate')
-        button(type = 'submit') LOAD
+        section.get
+        h2 Get All Single Case
+        form(method = 'get', action = '/admin/get-SingleDate')
+            button(type = 'submit') LOAD Single
 
-    section.insert
-    h2 Add New Single Case Info
-    form(action='/admin/insertSingle',method='post',name='singleCase')
-        fieldset
-            legend Single Case Information
-            br
-            div.form-group
-                label(for='Gender') Gender:
-                select#Gender.form-control(type='select',placeholder='Gender',name = 'Gender')
-                    option(value = 'Male') Male
-                    option(value = 'Female') Female
-                    option(value = 'Other') Other
-            br
-            div.form-group
-                label(for='Age') Age:
-                input#Age.form-control(type='text',placeholder='digit',name='Age')
-            br
-            div.form-group
-                label(for='Symptom') Symptom:
-                input#Symptom.form-control(type='text',name='Symptom',placeholder='xxx,xxx,xxx,ect')
-            br
-            div.form-group
-                label(for='Confirmed_Date') Confirmed Date:
-                input#Confirmed_Date.form-control(type='text',name='Confirmed_Date',placeholder='dd,mm,yyyy')
-            br
+        section.get
+        h2 Get All Total Case
+        form(method = 'get', action = '/admin/get-dataTotal')
+            button(type = 'submit') LOAD Total
 
-            div.form-group
-                label(for='Living_City') Living City:
-                select#Living_City.form-control(type='select',placeholder='Living City',name = 'Living_City')
-                    option(value = 'City of Melbourne') City of Melbourne
-                    option(value = 'City of Port Phillip') City of Port Phillip
-                    option(value = 'City of Yarra') City of Yarra
-                    option(value = 'City of Banyule') City of Banyule
-                    option(value = 'City of Darebin') City of Darebin
-                    option(value = 'City of Hume') City of Hume
-                    option(value = 'City of Moreland') City of Moreland
-                    option(value = 'Shire of Nillumbik') Shire of Nillumbik
-                    option(value = 'City of Whittlesea') City of Whittlesea
-                    option(value = 'City of Boroondara') City of Boroondara
-                    option(value = 'City of Knox') City of Knox
-                    option(value = 'City of Manningham') City of Manningham
-                    option(value = 'City of Maroondah') City of Maroondah
-                    option(value = 'City of Whitehorse') City of Whitehorse
-                    option(value = 'Shire of Yarra Ranges') Shire of Yarra Ranges
-                    option(value = 'City of Bayside') City of Bayside
-                    option(value = 'City of Casey') City of Casey
-                    option(value = 'City of Greater Dandenong') City of Greater Dandenong
-                    option(value = 'City of Frankston') City of Frankston
-                    option(value = 'City of Glen Eira') City of Glen Eira
-                    option(value = 'City of Kingston') City of Kingston
-                    option(value = 'City of Monash') City of Monash
-                    option(value = 'Shire of Mornington Peninsula') Shire of Mornington Peninsula
-                    option(value = 'City of Stonnington') City of Stonnington
-                    option(value = 'City of Brimbank') City of Brimbank
-                    option(value = 'City of Hobsons Bay') City of Hobsons Bay
-                    option(value = 'City of Maribyrnong') City of Maribyrnong
-                    option(value = 'City of Melton') City of Melton
-                    option(value = 'City of Moonee Valley') City of Moonee Valley
-                    option(value = 'City of Wyndham') City of Wyndham
+        section.get
+        h2 Get All Advises
+        form(method = 'get',action = '/admin/get-Advises')
+            button(type = 'submit') LOAD Advises
+
+        section.insert
+        h2 Add New Single Case Info
+        form(action='/admin/insertSingle',method='post',name='singleCase')
+            fieldset
+                legend Single Case Information
                 br
-            button(type='submit') ADD
-    br
-    br
+                div.form-group
+                    label(for='Gender') Gender:
+                    select#Gender.form-control(type='select',placeholder='Gender',name = 'Gender')
+                        option(value = 'Male') Male
+                        option(value = 'Female') Female
+                        option(value = 'Other') Other
+                br
+                div.form-group
+                    label(for='Age') Age:
+                    input#Age.form-control(type='text',placeholder='digit',name='Age')
+                br
+                div.form-group
+                    label(for='Symptom') Symptom:
+                    input#Symptom.form-control(type='text',name='Symptom',placeholder='xxx,xxx,xxx,ect')
+                br
+                div.form-group
+                    label(for='Confirmed_Date') Confirmed Date:
+                    input#Confirmed_Date.form-control(type='text',name='Confirmed_Date',placeholder='dd,mm,yyyy')
+                br
 
-    section.insert
-    h2 Add Total Case Info
-    form(action = 'insertTotal',method='post',name = 'totalCase')
-        fieldset
-            legend Total Case Information
-            br
-            div.form-group
-                label(for='Date') Date
-                input#Date.form-controller(type = 'text',placeholder='dd,mm,yyyy',name = 'Date')
-            br
-            div.form-group
-                label(for='Accumulate_Confirmed_Cases') Accumulate Confirmed Cases
-                input#Accumulate_Confirmed_Cases.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Confirmed_Cases')
-            br
-            div.form-group
-                label(for='Current_Existing_Cases') Current Existing Cases
-                input#Exist_Confirmed_Cases.form-controller(type = 'text',placeholder='digit',name = 'Exist_Confirmed_Cases')
-            br
-            div.form-group
-                label(for='Accumulate_Deaths') Accumulate Deaths
-                input#Deaths.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Deaths')
-            br
-            div.form-group
-                label(for='Accumulate_Cured_Cases') Accumulate Cured Cases
-                input#Cured_Cases.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Cured_Cases')
-            br
-            button(type='submit') ADD
-    br
-    br
+                div.form-group
+                    label(for='Living_City') Living City:
+                    select#Living_City.form-control(type='select',placeholder='Living City',name = 'Living_City')
+                        option(value = 'City of Melbourne') City of Melbourne
+                        option(value = 'City of Port Phillip') City of Port Phillip
+                        option(value = 'City of Yarra') City of Yarra
+                        option(value = 'City of Banyule') City of Banyule
+                        option(value = 'City of Darebin') City of Darebin
+                        option(value = 'City of Hume') City of Hume
+                        option(value = 'City of Moreland') City of Moreland
+                        option(value = 'Shire of Nillumbik') Shire of Nillumbik
+                        option(value = 'City of Whittlesea') City of Whittlesea
+                        option(value = 'City of Boroondara') City of Boroondara
+                        option(value = 'City of Knox') City of Knox
+                        option(value = 'City of Manningham') City of Manningham
+                        option(value = 'City of Maroondah') City of Maroondah
+                        option(value = 'City of Whitehorse') City of Whitehorse
+                        option(value = 'Shire of Yarra Ranges') Shire of Yarra Ranges
+                        option(value = 'City of Bayside') City of Bayside
+                        option(value = 'City of Casey') City of Casey
+                        option(value = 'City of Greater Dandenong') City of Greater Dandenong
+                        option(value = 'City of Frankston') City of Frankston
+                        option(value = 'City of Glen Eira') City of Glen Eira
+                        option(value = 'City of Kingston') City of Kingston
+                        option(value = 'City of Monash') City of Monash
+                        option(value = 'Shire of Mornington Peninsula') Shire of Mornington Peninsula
+                        option(value = 'City of Stonnington') City of Stonnington
+                        option(value = 'City of Brimbank') City of Brimbank
+                        option(value = 'City of Hobsons Bay') City of Hobsons Bay
+                        option(value = 'City of Maribyrnong') City of Maribyrnong
+                        option(value = 'City of Melton') City of Melton
+                        option(value = 'City of Moonee Valley') City of Moonee Valley
+                        option(value = 'City of Wyndham') City of Wyndham
+                    br
+                button(type='submit') ADD
+        br
+        br
+
+        section.insert
+        h2 Add Total Case Info
+        form(action = 'insertTotal',method='post',name = 'totalCase')
+            fieldset
+                legend Total Case Information
+                br
+                div.form-group
+                    label(for='Date') Date
+                    input#Date.form-controller(type = 'text',placeholder='dd,mm,yyyy',name = 'Date')
+                br
+                div.form-group
+                    label(for='Accumulate_Confirmed_Cases') Accumulate Confirmed Cases
+                    input#Accumulate_Confirmed_Cases.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Confirmed_Cases')
+                br
+                div.form-group
+                    label(for='Current_Existing_Cases') Current Existing Cases
+                    input#Exist_Confirmed_Cases.form-controller(type = 'text',placeholder='digit',name = 'Exist_Confirmed_Cases')
+                br
+                div.form-group
+                    label(for='Accumulate_Deaths') Accumulate Deaths
+                    input#Deaths.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Deaths')
+                br
+                div.form-group
+                    label(for='Accumulate_Cured_Cases') Accumulate Cured Cases
+                    input#Cured_Cases.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Cured_Cases')
+                br
+                button(type='submit') ADD
+        br
+        br
 
 
 
-    section.delete
-    h2 Delete a Single Case
-    form(action='/admin/deleteSingle',method='post',name='singleCaseDelete')
-        fieldset
-            legend Single Case ID
-            br
-            div.form-group
-                label(for='id') ID
-                input#id(type='text', name='id')
-            br
-            button(type='submit') DELETE
-
-    br
-    br
-
-    section.delete
-    h2 Delete a Total Case
-    form(action='/admin/deleteSingle',method='post',name='singleCaseDelete')
-        fieldset
-            legend Total Case ID
-            br
-            div.form-group
-                label(for='_id') ID
-                input#_id(type='text', name='id')
+        section.delete
+        h2 Delete a Single Case
+        form(action='/admin/deleteSingle',method='post',name='singleCaseDelete')
+            fieldset
+                legend Single Case ID
+                br
+                div.form-group
+                    label(for='id') ID
+                    input#id(type='text', name='id')
                 br
                 button(type='submit') DELETE
+
+        br
+        br
+
+        section.delete
+        h2 Delete a Total Case
+        form(action='/admin/deleteSingle',method='post',name='singleCaseDelete')
+            fieldset
+                legend Total Case ID
+                br
+                div.form-group
+                    label(for='_id') ID
+                    input#_id(type='text', name='id')
+                    br
+                    button(type='submit') DELETE
 
