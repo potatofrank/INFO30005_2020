@@ -1,0 +1,54 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-cale=1')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/homepage.css')
+    title Team Ultra Protection
+    script(src='https://kit.fontawesome.com/d821761733.js', crossorigin='anonymous')
+  script.
+    function openSlideMenu() {
+      document.getElementById('menu').style.width = '200px';
+      document.getElementById('content').style.marginLeft = '200px';
+    }
+    function closeSlideMenu() {
+      document.getElementById('menu').style.width = '0';
+      document.getElementById('content').style.marginLeft = '0';
+    }
+  body
+    #content.wrapper
+
+      .header
+        span.slide
+          a(href='#', onclick='openSlideMenu()')
+            i.fas.fa-bars
+        h2 Team Ultra Protection
+
+      #menu.sidebar
+        a.close(href='#', onclick='closeSlideMenu()')
+          i.fas.fa-times
+
+        a(href='/Home')
+          i.fas.fa-home
+          |   Home
+        a(href='/log')
+          i.fas.fa-user
+          |   Login
+
+        a(href='/contact')
+          i.fas.fa-id-card
+          |   Contact Us
+
+        a(href='#')
+          i.fas.fa-chart-line
+          |   Charts
+        .social_media
+          a(href='#')
+            i.fab.fa-facebook-square
+          a(href='#')
+            i.fab.fa-twitter-square
+          a(href='#')
+            i.fab.fa-instagram
+
+
+      block content

@@ -1,17 +1,24 @@
-extends layout
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/loginPage.css')
 
-block content
-  h1 Welcome To The Admin System
-  h2 Please Login
+    body
+        .login
+            h1 Welcome To The Admin System
+            h2 Please Login
+
+            form(method='POST' action="/users/login")
+                div
+                    label User Name:
+                    input(type='text', placeholder='Enter username' name='username')
+                div
+                    label Password:
+                    input(type='text', name='password',
+                            placeholder='Enter password')
+                br
+                button(type='submit') Login
 
 
-  form(method='POST' action="/users/login")
-    div
-      label User Name:
-      input(type='text', placeholder='Enter username' name='username')
-    div
-      label Password:
-      input(type='password', name='password')
-    button(type='submit') Login
-
-  h3 #{error}
+            h3 #{error}

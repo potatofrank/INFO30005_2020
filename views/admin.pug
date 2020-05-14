@@ -1,8 +1,10 @@
-extends layout
-
-block content
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/admin.css')
     h1 #{username}
-    h3 11111111111
+
     section.insert
     h2 Add New Single Case Info
     form(action='/admin/insertSingle',method='post',name='singleCase')
@@ -125,3 +127,7 @@ block content
                 input#_id(type='text', name='id')
                 br
                 button(type='submit') DELETE
+
+    section.get
+    h2 Get a Single Case
+    form(action='/admin/get-dataSingle'.method='post',name='get-dataSingle')
