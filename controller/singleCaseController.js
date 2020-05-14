@@ -1,12 +1,13 @@
 var mongoose = require('mongoose');
 var singleCase = mongoose.model('singleCaseInfo');
-//var ObjectID = require('mongodb').ObjectID;
+
 
 var findAllSingleCase = function(req, res, next) {
     singleCase.find()
         .lean()
         .then(function(doc) {
-            res.render('admin', {items: doc});
+            res.render('A-singleCaseDisplay', {singleCases: doc});
+           //console.log(doc);
         });
 };
 
@@ -22,7 +23,7 @@ var createSingleCase = function(req, res, next) {
     var data = new singleCase(item);
     data.save();
 
-    res.render('admin', {username: 'Hello admin, Please enter the data'});
+    res.render('admin', {username: 'Hello admin, Please enter the other data'});
 };
 
 var updateSingleCase = function(req, res, next) {
@@ -50,9 +51,6 @@ var deleteSingleCase = function(req, res, next) {
 
     res.render('admin', {username: 'Hello admin, Please enter the data'});
 };
-
-
-
 
 module.exports.findAllSingleCase = findAllSingleCase;
 module.exports.createSingleCase = createSingleCase;

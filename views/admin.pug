@@ -5,6 +5,11 @@ html
         link(rel='stylesheet', href='/stylesheets/admin.css')
     h1 #{username}
 
+    section.get
+    h2 Get All Single Case
+    form(method = 'get', action = '/admin/get-SingleDate')
+        button(type = 'submit') LOAD
+
     section.insert
     h2 Add New Single Case Info
     form(action='/admin/insertSingle',method='post',name='singleCase')
@@ -84,16 +89,16 @@ html
                 input#Accumulate_Confirmed_Cases.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Confirmed_Cases')
             br
             div.form-group
-                label(for='Exist_Confirmed_Cases') Exist Confirmed Cases
+                label(for='Current_Existing_Cases') Current Existing Cases
                 input#Exist_Confirmed_Cases.form-controller(type = 'text',placeholder='digit',name = 'Exist_Confirmed_Cases')
             br
             div.form-group
-                label(for='Deaths') Deaths
-                input#Deaths.form-controller(type = 'text',placeholder='digit',name = 'Deaths')
+                label(for='Accumulate_Deaths') Accumulate Deaths
+                input#Deaths.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Deaths')
             br
             div.form-group
-                label(for='Cured_Cases') Cured Cases
-                input#Cured_Cases.form-controller(type = 'text',placeholder='digit',name = 'Cured_Cases')
+                label(for='Accumulate_Cured_Cases') Accumulate Cured Cases
+                input#Cured_Cases.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Cured_Cases')
             br
             button(type='submit') ADD
     br
@@ -128,6 +133,3 @@ html
                 br
                 button(type='submit') DELETE
 
-    section.get
-    h2 Get a Single Case
-    form(action='/admin/get-dataSingle'.method='post',name='get-dataSingle')
