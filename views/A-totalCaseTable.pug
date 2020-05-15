@@ -2,46 +2,47 @@ extends A-layout
 
 block content
     .main_content2
-        .insertTotal
-            h2 Add Overview Data
-            form(action = '/admin/insertTotal',method='post',name = 'totalCase')
-                fieldset
-                    legend Total Case Information
-                    br
-                    div.form-group
-                        label(for='Date') Date
-                        input#Date.form-controller(type = 'text',placeholder='dd,mm,yyyy',name = 'Date')
-                    br
-                    div.form-group
-                        label(for='Accumulate_Confirmed_Cases') Accumulate Confirmed Cases
-                        input#Accumulate_Confirmed_Cases.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Confirmed_Cases')
-                    br
-                    div.form-group
-                        label(for='Current_Existing_Cases') Current Existing Cases
-                        input#Exist_Confirmed_Cases.form-controller(type = 'text',placeholder='digit',name = 'Exist_Confirmed_Cases')
-                    br
-                    div.form-group
-                        label(for='Accumulate_Deaths') Accumulate Deaths
-                        input#Deaths.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Deaths')
-                    br
-                    div.form-group
-                        label(for='Accumulate_Cured_Cases') Accumulate Cured Cases
-                        input#Cured_Cases.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Cured_Cases')
-                    br
-                    button(type='submit') ADD
-            br
-            br
+       h2 Add Overview Data
+       .insertTotal
+            
+           form(action = '/admin/insertTotal',method='post',name = 'totalCase')
+               fieldset
+                   legend Total Case Information
+                   br
+                   div.form-group
+                       label(for='Date') Date
+                       input#Date.form-controller(type = 'text',placeholder='dd,mm,yyyy',name = 'Date')
+                   br
+                   div.form-group
+                       label(for='Accumulate_Confirmed_Cases') Accumulate Confirmed Cases
+                       input#Accumulate_Confirmed_Cases.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Confirmed_Cases')
+                   br
+                   div.form-group
+                       label(for='Current_Existing_Cases') Current Existing Cases
+                       input#Exist_Confirmed_Cases.form-controller(type = 'text',placeholder='digit',name = 'Exist_Confirmed_Cases')
+                   br
+                   div.form-group
+                       label(for='Accumulate_Deaths') Accumulate Deaths
+                       input#Deaths.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Deaths')
+                   br
+                   div.form-group
+                       label(for='Accumulate_Cured_Cases') Accumulate Cured Cases
+                       input#Cured_Cases.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Cured_Cases')
+                   br
+                   button(type='submit') ADD
+           br
+           br
 
-        .deleteTotal
-            h2 Delete Overview Data
-            form(action='/admin/deleteSingle',method='post',name='singleCaseDelete')
-                fieldset
-                    legend Total Case ID
-                    br
-                    div.form-group
-                        label(for='_id') ID
-                        input#_id(type='text', name='id')
-                        br
-                        button(type='submit') DELETE
-            br
-            br
+       .deleteTotal
+           h2 Delete Overview Data
+           form(action='/admin/deleteSingle',method='post',name='singleCaseDelete')
+               fieldset
+                   legend Total Case ID
+                   br
+                   div.form-group
+                       label(for='_id') ID
+                       input#_id(type='text', name='id')
+                       br
+                       button(type='submit') DELETE
+           br
+           br
