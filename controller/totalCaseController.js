@@ -45,7 +45,7 @@ var createTotalCase = function(req, res, next) {
     };
     var data = new totalCase(item);
     data.save();
-    res.render('H-Home');
+    res.render('A-Home');
 };
 
 
@@ -53,7 +53,7 @@ var deleteTotalCase = function(req, res, next) {
     var id = req.body.id;
     console.log(id);
     totalCase.findOneAndDelete(id).exec();
-    res.render('admin', {username: 'Hello admin, Please enter the data'});
+    res.render('A-Home');
 };
 
 module.exports.findAllTotalCase = findAllTotalCase;

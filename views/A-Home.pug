@@ -1,0 +1,20 @@
+extends A-layout
+
+block content
+    .main_content
+        .getSingle
+            h2 Get All Patients
+            form(method = 'get', action = '/admin/get-SingleDate')
+                button(type = 'submit') PATIENT
+
+        .getTotal
+            h2 Get Overview Data
+            form(method = 'get', action = '/admin/get-dataTotal')
+                button(type = 'submit') OVERVIEW DATA
+
+        .getAvises
+            h2 Get All Messages
+            form(method = 'get',action = '/admin/get-Advises')
+                button(type = 'submit') MESSAGES
+
+
