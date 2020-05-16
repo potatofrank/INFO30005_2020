@@ -1,11 +1,37 @@
 var mongoose = require('mongoose');
 var totalCase = mongoose.model('totalCaseInfo');
+var AccumulateConfirmedCases;
+var CurrentExistingCases;
+var AccumulateDeaths;
+var AccumulateCuredCases;
+
+
 
 var findAllTotalCase = function(req, res, next) {
-    totalCase.find()
+    totalCase.find({})
         .lean()
         .then(function(doc) {
-            res.render('admin', {items: doc});
+            res.render('A-totalCaseDisplay', {totalCases: doc});
+            console.log(doc);
+        });
+};
+
+var findlatesttotalCase = function (req,res,next) {
+    totalCase.find({})
+        .lean()
+        .then(function(doc){
+            AccumulateConfirmedCases = doc.seats[doc.seats.length-1].Accumulate_Confirmed_Cases;
+            CurrentExistingCases = doc.seats[doc.seats.length-1].Current_Existing_Cases;
+            AccumulateDeaths = doc.seats[doc.seats.length-1].Accumulate_Deaths;
+            AccumulateCuredCases = doc.seats[doc.seats.length-1].Accumulate_Cured_Cases;
+            res.render('H-Home',{Accumulate_Confirmed_Cases: AccumulateConfirmedCases ,Current_Existing_Cases:CurrentExistingCases,
+                Accumulate_Deaths: AccumulateDeaths,Accumulate_Cured_Cases: AccumulateCuredCases})
+            console.log(AccumulateConfirmedCases);
+            console.log(CurrentExistingCases);
+            console.log(AccumulateDeaths);
+            console.log(AccumulateCuredCases);
+
+
         });
 };
 
@@ -13,41 +39,24 @@ var createTotalCase = function(req, res, next) {
     var item = {
         Date:req.body.Date,
         Accumulate_Confirmed_Cases:req.body.Accumulate_Confirmed_Cases,
-        Exist_Confirmed_Cases:req.body.Exist_Confirmed_Cases,
-        Deaths:req.body.Deaths,
-        Cured_Cases:req.body.Cured_Cases
+        Current_Existing_Cases:req.body.Current_Existing_Cases,
+        Accumulate_Deaths:req.body.Accumulate_Deaths,
+        Accumulate_Cured_Cases:req.body.Accumulate_Cured_Cases
     };
     var data = new totalCase(item);
     data.save();
-
-    res.render('admin', {username: 'Hello admin, Please enter the data'});
+    res.render('A-Home');
 };
 
-var updateTotalCase = function(req, res, next) {
-    var id = req.body.id;
-
-    totalCase.findById(id, function(err, doc) {
-        if (err) {
-            console.error('error, no total case found');
-        }
-        doc.Date = req.body.Date;
-        doc.Accumulate_Confirmed_Cases = req.body.Accumulate_Confirmed_Cases;
-        doc.Exist_Confirmed_Cases = req.body.Exist_Confirmed_Cases;
-        doc.Deaths = req.body.Deaths;
-        doc.Cured_Cases = req.body.Cured_Cases;
-        doc.save();
-    });
-    res.redirect('/');
-};
 
 var deleteTotalCase = function(req, res, next) {
     var id = req.body.id;
     console.log(id);
     totalCase.findOneAndDelete(id).exec();
-    res.render('admin', {username: 'Hello admin, Please enter the data'});
+    res.render('A-Home');
 };
 
 module.exports.findAllTotalCase = findAllTotalCase;
 module.exports.createTotalCase = createTotalCase;
-module.exports.updateTotalCase = updateTotalCase;
 module.exports.deleteTotalCase = deleteTotalCase;
+module.exports.findlatesttotalCase = findlatesttotalCase;

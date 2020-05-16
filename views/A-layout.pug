@@ -1,0 +1,35 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/admin.css')
+        link(rel='stylesheet', type='text/css', href='sweetalert.css')
+        script(src='https://kit.fontawesome.com/d821761733.js', crossorigin='anonymous')
+        script(type='text/javascript').
+            function validation() {
+                swal("Thanks, you case has been submitted!");
+            }
+    body
+        h1
+        #content.wrapper
+
+            h2 Admin System
+
+            nav.sidebar
+                ul
+                    li
+                        a(href='/admin/loadData')
+                            i.fas.fa-sync-alt
+                            |    Load Data
+                    li
+                        a(href='/admin/singleTable')
+                            i.fas.fa-table
+                            |   Submit Patient Info
+                    li
+                        a(href='/admin/totalTable')
+                            i.fas.fa-table
+                            |   Submit Overview Data
+
+
+            block content
+

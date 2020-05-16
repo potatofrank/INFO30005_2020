@@ -13,4 +13,5 @@ mongoose.connect(uri,
 
 require('./singleCase.js');
 require('./totalCase.js');
+require('./advises.js');
 
