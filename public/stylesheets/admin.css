@@ -55,3 +55,11 @@ nav ul li a:hover{
     right: 10px;
     border-radius: 100px / 10px;
 }
+
+#popup {
+    display: none;
+    background: #efefef;
+    border: 1px solid black;
+    width: 50%;
+    height: 100px;
+}

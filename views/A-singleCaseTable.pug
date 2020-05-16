@@ -62,10 +62,12 @@ block content
                             option(value = 'City of Moonee Valley') City of Moonee Valley
                             option(value = 'City of Wyndham') City of Wyndham
                         br
-                    button(onclick='validation()' type='submit') ADD
+                    button(onclick='showmsg()' type='submit') ADD
 
-            script(src='sweetalert.min.js')
-
+                    #popup
+                        | Your case has been submitted successfully!
+                        br
+                        button(onclick='closemsg()') okay
             br
             br
 
