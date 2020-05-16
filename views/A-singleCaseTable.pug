@@ -1,7 +1,7 @@
 extends A-layout
 
 block content
-    .main_content1
+    .main_content2
         .insertSingle
             h2 Add New Patient Info
             form(action='/admin/insertSingle',method='post',name='singleCase')
@@ -62,9 +62,12 @@ block content
                             option(value = 'City of Moonee Valley') City of Moonee Valley
                             option(value = 'City of Wyndham') City of Wyndham
                         br
-                    button(type='submit') ADD
+
+                    button(onclick='showmsg()',type='submit') ADD
+                    h5 #{output1}
             br
             br
+
 
         .deleteSingle
             h2 Delete Patient Info
@@ -76,7 +79,19 @@ block content
                         label(for='id') ID
                         input#id(type='text', name='id')
                     br
-                    button(type='submit') DELETE
+                    button(onclick='showmsg()',type='submit') DELETE
+                    br
+                    br
+                    h5 #{output2}
 
             br
             br
+
+
+    #popup
+        | Successfully Submitted !!!
+        br
+        br
+        button.bt1(name='subject',onclick='closemsg()') Okay
+        br
+        br

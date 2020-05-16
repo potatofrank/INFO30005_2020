@@ -5,7 +5,8 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-cale=1')
     link(rel='stylesheet', type='text/css', href='/stylesheets/homepage.css')
     title Team Ultra Protection
-    script(src='https://kit.fontawesome.com/d821761733.js', crossorigin='anonymous')
+    script(src= 'https://kit.fontawesome.com/d821761733.js', crossorigin='anonymous')
+    script(src = '../controller/myChart.js')
   script.
     function openSlideMenu() {
       document.getElementById('menu').style.width = '200px';
@@ -15,6 +16,8 @@ html(lang='en')
       document.getElementById('menu').style.width = '0';
       document.getElementById('content').style.marginLeft = '0';
     }
+
+
   body
     #content.wrapper
 

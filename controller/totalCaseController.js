@@ -45,7 +45,7 @@ var createTotalCase = function(req, res, next) {
     };
     var data = new totalCase(item);
     data.save();
-    res.render('A-Home');
+    //res.render('A-totalCaseTable', {output1: 'Submit Successfully'});
 };
 
 
@@ -53,7 +53,7 @@ var deleteTotalCase = function(req, res, next) {
     var id = req.body.id;
     console.log(id);
     totalCase.findOneAndDelete(id).exec();
-    res.render('A-Home');
+    //res.render('A-totalCaseTable', {output2: 'Delete Successfully'});
 };
 
 module.exports.findAllTotalCase = findAllTotalCase;
