@@ -23,7 +23,6 @@ var createSingleCase = function(req, res, next) {
     var data = new singleCase(item);
     data.save();
 
-    //res.render('A-singleCaseTable', {output1: 'Submit Successfully'});
 };
 
 

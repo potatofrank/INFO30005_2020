@@ -1,23 +1,14 @@
 extends H-layout
 
 block content
+            script(src="../controller/totalCaseController")
             .main_content
                 .table
-                    form(method='get',action='/Home#')
-                        fieldset
-                            legend Case Overview
-                                table.center
-                                    tr
-                                        th Accumulate Confirmed Cases
-                                        th Exist Confirmed Cases
-                                        th Deaths
-                                        th Cured Cases
-                                    tr
-
-                                        td #{Accumulate_Confirmed_Cases}
-                                        td #{Current_Existing_Cases}
-                                        td #{Accumulate_Deaths}
-                                        td #{Accumulate_Cured_Cases}
+                    each value in overview
+                        div 1: #{value.Accumulate_Confirmed_Cases}
+                        div 2: #{value.Accumulate_Deaths}
+                        div 3: #{value.Current_Existing_Cases}
+                        div 4: #{value.Accumulate_Cured_Cases}
                 br
                 br
                 .map

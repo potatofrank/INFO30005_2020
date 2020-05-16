@@ -1,9 +1,5 @@
 var mongoose = require('mongoose');
 var totalCase = mongoose.model('totalCaseInfo');
-var AccumulateConfirmedCases;
-var CurrentExistingCases;
-var AccumulateDeaths;
-var AccumulateCuredCases;
 
 
 
@@ -12,7 +8,7 @@ var findAllTotalCase = function(req, res, next) {
         .lean()
         .then(function(doc) {
             res.render('A-totalCaseDisplay', {totalCases: doc});
-            console.log(doc);
+            console.log([doc[doc.length - 1]]);
         });
 };
 
@@ -20,18 +16,8 @@ var findlatesttotalCase = function (req,res,next) {
     totalCase.find({})
         .lean()
         .then(function(doc){
-            AccumulateConfirmedCases = doc.seats[doc.seats.length-1].Accumulate_Confirmed_Cases;
-            CurrentExistingCases = doc.seats[doc.seats.length-1].Current_Existing_Cases;
-            AccumulateDeaths = doc.seats[doc.seats.length-1].Accumulate_Deaths;
-            AccumulateCuredCases = doc.seats[doc.seats.length-1].Accumulate_Cured_Cases;
-            res.render('H-Home',{Accumulate_Confirmed_Cases: AccumulateConfirmedCases ,Current_Existing_Cases:CurrentExistingCases,
-                Accumulate_Deaths: AccumulateDeaths,Accumulate_Cured_Cases: AccumulateCuredCases})
-            console.log(AccumulateConfirmedCases);
-            console.log(CurrentExistingCases);
-            console.log(AccumulateDeaths);
-            console.log(AccumulateCuredCases);
-
-
+            res.render('H-Home', {overview: [doc[doc.length - 1]]})
+            console.log(doc[doc.length - 1]);
         });
 };
 
