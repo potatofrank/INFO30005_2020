@@ -1,12 +1,16 @@
-a(href='admin')
-    button Back
+extends A-layout
 
-each val in totalCases
-    h4 ----------------------
-     div Date: #{val.Date}
-     div id:#{val._id}
-     div Accumulate Confirmed Cases: #{val.Accumulate_Confirmed_Cases}
-     div Current Existing Cases: #{val.Current_Existing_Cases}
-     div Accumulate Deaths: #{val.Accumulate_Deaths}
-     div Accumulate Cured_Cases: #{val.Accumulate_Cured_Cases}
-     h4 ----------------------
+block content
+
+    a(href='admin')
+        button Back
+
+    each val in totalCases
+        h4 ----------------------
+         div Date: #{val.Date}
+         div id:#{val._id}
+         div Accumulate Confirmed Cases: #{val.Accumulate_Confirmed_Cases}
+         div Current Existing Cases: #{val.Current_Existing_Cases}
+         div Accumulate Deaths: #{val.Accumulate_Deaths}
+         div Accumulate Cured_Cases: #{val.Accumulate_Cured_Cases}
+         h4 ----------------------

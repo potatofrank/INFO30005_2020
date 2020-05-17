@@ -1,9 +1,12 @@
-a(href='admin')
-    button Back
+extends A-layout
 
-each Value in advises
-    h4 ----------------------
-    div id:#{Value._id}
-    div email: #{Value.eMail}
-    div content: #{Value.content}
-    h4 ----------------------
+block content
+    a(href='admin')
+        button Back
+
+    each Value in advises
+        h4 ----------------------
+        div id:#{Value._id}
+        div email: #{Value.eMail}
+        div content: #{Value.content}
+        h4 ----------------------
