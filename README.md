@@ -1,4 +1,4 @@
-# info30005 project2 API server + front end
+# info30005 deliverable3 API server + front end
 
 **Login:**
 The current log in function requires a username and a password. There's currently no sign up funcion implemented, thus we only use an admin account to log in. The details of the admin account are hard coded inside the "login.js" file. To log in, enter the <br /> username: admin <br />
