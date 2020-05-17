@@ -8,7 +8,7 @@ var findAllTotalCase = function(req, res, next) {
         .lean()
         .then(function(doc) {
             res.render('A-totalCaseDisplay', {totalCases: doc});
-            console.log([doc[doc.length - 1]]);
+            //console.log([doc[doc.length - 1]]);
         });
 };
 
@@ -17,7 +17,7 @@ var findlatesttotalCase = function (req,res,next) {
         .lean()
         .then(function(doc){
             res.render('H-Home', {overview: [doc[doc.length - 1]]})
-            console.log(doc[doc.length - 1]);
+            //console.log(doc[doc.length - 1]);
         });
 };
 

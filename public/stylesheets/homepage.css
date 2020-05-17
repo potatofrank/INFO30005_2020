@@ -1,8 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 body{
+    background-image: url('../images/HomePageBackgroud.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Josefin Sans', sans-serif;
     overflow-x: hidden;
+}
+
+table{
+    color: black;
+    text-align: center;
+    margin: auto;
+}
+
+.map{
+    width: 50%;
+    margin: auto;
+}
+
+.map :hover{
+    fill:#2E2EFE;
 }
 
 .sidebar{
@@ -62,7 +82,7 @@ body{
 
 .header{
     width: 100%;
-
+    opacity: 90%;
     height: 50px;
     position: relative;
     padding: 5px;
