@@ -18,17 +18,18 @@ block content
                     br
                     div.form-group
                         label(for='Current_Existing_Cases') Current Existing Cases
-                        input#Exist_Confirmed_Cases.form-controller(type = 'text',placeholder='digit',name = 'Exist_Confirmed_Cases')
+                        input#Current_Existing_Cases.form-controller(type = 'text',placeholder='digit',name = 'Current_Existing_Cases')
                     br
                     div.form-group
                         label(for='Accumulate_Deaths') Accumulate Deaths
-                        input#Deaths.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Deaths')
+                        input#Accumulate_Deaths.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Deaths')
                     br
                     div.form-group
                         label(for='Accumulate_Cured_Cases') Accumulate Cured Cases
-                        input#Cured_Cases.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Cured_Cases')
+                        input#Accumulate_Cured_Cases.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Cured_Cases')
                     br
-                    button(type='submit') ADD
+                    button(onclick='showmsg()',type='submit') ADD
+
             br
             br
 
@@ -42,6 +43,14 @@ block content
                         label(for='_id') ID
                         input#_id(type='text', name='id')
                         br
-                        button(type='submit') DELETE
+                        button(onclick='showmsg()',type='submit') DELETE
+
             br
             br
+    #popup
+        | Successfully Submitted !!!
+        br
+        br
+        button.bt1(name='subject',onclick='closemsg()') Okay
+        br
+        br

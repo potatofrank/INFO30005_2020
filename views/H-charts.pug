@@ -1,3 +1,24 @@
 extends H-layout
 
 block content
+    .box
+
+    section.mainbox
+        .column
+            .panel.bar
+                h2
+                | Bar Graph
+                .chart
+                .panel-footer
+            .panel.line
+                h2
+                | Line Graph
+                .chart
+                .panel-footer
+            .panel.pie
+                h2
+                |   Pie Graph
+                .chart
+                .panel-footer
+
+    script(src = '../controller/echarts.min.js')

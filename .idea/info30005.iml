@@ -7,5 +7,6 @@
     <orderEntry type="library" name="@types/express" level="application" />
     <orderEntry type="library" name="b99e675b6e" level="application" />
     <orderEntry type="library" name="d821761733" level="application" />
+    <orderEntry type="library" name="loader" level="application" />
   </component>
 </module>

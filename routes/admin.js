@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var singleCaseController = require('../controller/singleCaseController.js');
 var totalCaseController = require('../controller/totalCaseController.js');
-var advisesController = require('../controller/advisesController');
+var advisesController = require('../controller/advisesController.js');
 
 
 router.get('/admin', function(req, res, next) {
