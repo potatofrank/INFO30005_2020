@@ -5,10 +5,18 @@ block content
             .main_content
                 .table
                     each value in overview
-                        div 1: #{value.Accumulate_Confirmed_Cases}
-                        div 2: #{value.Accumulate_Deaths}
-                        div 3: #{value.Current_Existing_Cases}
-                        div 4: #{value.Accumulate_Cured_Cases}
+                        table.center
+                            tr
+                                th Accumulate Confirmed Cases
+                                th Accumulate Deaths
+                                th Current Existing Cases
+                                th Accumulate Cured Cases
+                            tr
+                                td #{value.Accumulate_Confirmed_Cases}
+                                td #{value.Accumulate_Deaths}
+                                td #{value.Current_Existing_Cases}
+                                td #{value.Accumulate_Cured_Cases}
+                       
                 br
                 br
                 .map
