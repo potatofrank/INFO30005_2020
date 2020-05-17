@@ -1,15 +1,15 @@
-# info30005 project2 API server
+# info30005 project2 API server + front end
 
 **Login:**
-The current log in function requires a username and a password. There's currently no sign up funcion implemented, thus we only use an admin account to log in. The details of the admin account are hard coded inside the "login.js" file. To log in, enter the <br /> username: admin <br />
-password: admin
+The current log in function requires a username and a password. There's currently no sign up funcion implemented, thus we only use an admin account to log in. The details of the admin account are hard coded inside the "login.js" file. To log in, enter the username: admin <br />
+password: admin <br />
 
 **Data Filling:**
 If you successfully log in with our admin account details, you would be able to fill in relevant information of a patient who has been tested positive for Cov-19. The required fields of the information can be gender, age, symptom, confirmed date, etc. This is submitted by government officers and doctors. There's another section named "Submit Overview Data" that can update total accumulated cases, cured and death cases in Melbourne. We're assuming that the overview data is accurately collected by authorized departments and will be updated frequently by a programmer/maintainer. We can also delete cases by specifying the case object ID in database.
 There's also an advice/support submitting section available for all viewers as well which does not require logging in, thus non-authorized users can publish their thoughts about our website, or they can ask for any suggestions about protecting themselves from Covid-19.
 
 **Load Data:**
-Administrators who has accessibility to the admin page would be able to check all the case data they have entered. There are 3 kinds of data form that admins can view: individual patient data, overview of Melbourne pandemic data, advice data from all viewers of the website. <br />
+Administrators who has accessibility to the admin page would be able to check all the case data they have entered. There are 3 kinds of data form that admins can view: individual patient data, overview of Melbourne pandemic data, advice data from all viewers of the website.
 There are 3 buttons displayed at the admin page, and the data can be loaded by clicking the buttons.
 
 **Display Overview**
