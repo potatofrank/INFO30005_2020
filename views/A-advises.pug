@@ -1,12 +1,24 @@
 extends A-layout
 
 block content
-    a(href='admin')
-        button Back
-
-    each Value in advises
-        h4 ----------------------
-        div id:#{Value._id}
-        div email: #{Value.eMail}
-        div content: #{Value.content}
-        h4 ----------------------
+    .main_content3
+        a(href='admin')
+            button Back
+        br
+        br
+        each Value in advises
+            table.center
+                tr
+                    th Name
+                    th Value
+                tr
+                    td id
+                    td #{Value._id}
+                tr
+                    td email
+                    td #{Value.eMail}
+                tr
+                    td Issues
+                    td #{Value.content}
+            br
+            br
