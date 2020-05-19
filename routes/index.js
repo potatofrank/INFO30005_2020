@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var totalCaseController = require('../controller/totalCaseController.js');
 var advisesController = require('../controller/advisesController.js');
+var chartController = require('../public/javascripts/myChart');
 
 /* GET home page.
 router.get('/', function(req, res, next) {
