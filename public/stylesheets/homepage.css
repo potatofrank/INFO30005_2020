@@ -170,6 +170,38 @@ body{
     color: #4e5052;
     text-transform: capitalize;
 }
+//health tips
+h1 {
+  text-align: center;
+  color: steelblue;
+}
+body {
+ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRvb7ZXKNfWUqnkR286Up0eOAG4uaN0Zfh8M445ivtdDLVj-2cL&usqp=CAU");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.secretLi {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+th {
+  background-color: skyblue;
+}
+table{
+  width:800px;
+  height:100%;
+  background:#F0F8FF;
+  border-radius:10px;
+  box-shadow:0 0 40px -10px #4682B4;
+  margin:30px 20px 20px 220px;
+  padding:30px 30px;
+  box-sizing:border-box;
+  font-family:'Montserrat',sans-serif;
+  position:relative
+}
+
+
 
 
 
