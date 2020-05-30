@@ -33,20 +33,6 @@ block content
             br
             br
 
-        .deleteTotal
-            h2 Delete Overview Data
-            form(action='/admin/deleteSingle',method='post',name='singleCaseDelete')
-                fieldset
-                    legend Total Case ID
-                    br
-                    div.form-group
-                        label(for='_id') ID
-                        input#_id(type='text', name='id')
-                        br
-                        button(onclick='showmsg()',type='submit') DELETE
-
-            br
-            br
     #popup
         | Successfully Submitted !!!
         br

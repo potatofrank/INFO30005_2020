@@ -3,6 +3,23 @@ extends A-layout
 block content
 
     .main_content3
+        .delete
+            h2 Delete Patient Info
+            form(action='/admin/deleteSingle',method='post',name='singleCaseDelete')
+                fieldset
+                    legend Single Case ID
+                    br
+                    div.form-group
+                        label(for='id') ID
+                        input#id(type='text', name='id')
+                    br
+                    button(onclick='showmsg()',type='submit') DELETE
+                    br
+                    br
+                    h5 #{output2}
+
+        br
+        br
         a(href='admin')
             button Back
         br

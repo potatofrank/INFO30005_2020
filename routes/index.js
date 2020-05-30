@@ -2,14 +2,13 @@ var express = require('express');
 var router = express.Router();
 var totalCaseController = require('../controller/totalCaseController.js');
 var advisesController = require('../controller/advisesController.js');
-var chartController = require('../public/javascripts/myChart');
 
 /* GET home page.
 router.get('/', function(req, res, next) {
   res.render('H-Home',{ title: 'Team Ultra Protection' });
 });*/
 
-router.get('/log',function (req,res,next) {
+router.get('/login',function (req,res,next) {
   res.render('loginPage', { title: 'Admin Login' });
 });
 

@@ -2,6 +2,21 @@ extends A-layout
 
 block content
     .main_content3
+        .delete
+            h2 #{output2}
+            h2 Delete Overview Data
+            form(action='/admin/deleteSingle',method='post',name='singleCaseDelete')
+                fieldset
+                    legend Total Case ID
+                    br
+                    div.form-group
+                        label(for='_id') ID
+                        input#_id(type='text', name='id')
+                        br
+                        button(onclick='showmsg()',type='submit') DELETE
+
+        br
+        br
         a(href='admin')
             button Back
         br
