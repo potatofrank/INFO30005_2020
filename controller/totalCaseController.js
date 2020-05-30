@@ -36,7 +36,7 @@ var createTotalCase = function(req, res, next) {
 
 
 var deleteTotalCase = function(req, res, next) {
-    var id = req.body._id;
+    var id = req.body.id;
     console.log(id);
     totalCase.findByIdAndDelete(id).exec();
     res.render('A-Home');
