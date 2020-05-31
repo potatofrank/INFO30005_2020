@@ -4,11 +4,8 @@ const LocalStrategy = require('passport-local').Strategy;
 
 var userModel = require('../models/user.js');
 
-
-
-//create the UserModel for userinformaion
 var userInfo = [
-    {'local.username':'admin','local.password':'admin'},
+    {'local.name':'admin', 'local.password':'admin'},
 
 ];
 
