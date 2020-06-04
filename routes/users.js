@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var login = require('../controller/authenticate/login.js');
+var login = require('../controller/authenticate/login');
 
 router.post('/login',function (req,res,next){
 

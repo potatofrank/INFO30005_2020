@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var totalCaseController = require('../controller/totalCaseController.js');
-var advisesController = require('../controller/advisesController.js');
+var advisesController = require('../controller/advisesController');
 
-/* GET home page.
+/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('H-Home',{ title: 'Team Ultra Protection' });
-});*/
+  res.render('H-Home', { title: 'Team Ultra Protection' });
+});
 
 router.get('/log',function (req,res,next) {
   res.render('loginPage', { title: 'Admin Login' });
@@ -32,8 +32,7 @@ router.get('/Home',function (req,res,next) {
   res.render('H-Home');
 });
 
-
-router.get('/', totalCaseController.findlatesttotalCase);
+router.get('/Home#', totalCaseController.findlatesttotalCase);
 
 router.post('/insertAdvise', advisesController.createAdvise);
 

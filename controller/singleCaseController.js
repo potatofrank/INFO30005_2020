@@ -23,6 +23,7 @@ var createSingleCase = function(req, res, next) {
     var data = new singleCase(item);
     data.save();
 
+    res.render('A-Home');
 };
 
 
@@ -32,7 +33,7 @@ var deleteSingleCase = function(req, res, next) {
     console.log(id);
     singleCase.findOneAndDelete(id).exec();
 
-    //res.render('A-Home', {output2: 'Delete Successfully'});
+    res.render('A-Home');
 };
 
 module.exports.findAllSingleCase = findAllSingleCase;
