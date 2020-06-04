@@ -22,26 +22,17 @@ var createSingleCase = function(req, res, next) {
 
     var data = new singleCase(item);
     data.save();
-<<<<<<< HEAD
 
     res.render('A-Home');
-=======
-    //res.render('A-singleCaseTable')
-    res.status(200).send();
->>>>>>> 294cba528a6197f937b28f118eef3304c872cffd
 };
 
 
 var deleteSingleCase = function(req, res, next) {
     //var id = new ObjectID(req.body.id);
-    var id = req.body.id;
+    var id = req.body.ObjectID;
     console.log(id);
-<<<<<<< HEAD
     singleCase.findOneAndDelete(id).exec();
 
-=======
-    singleCase.findByIdAndDelete(id).exec();
->>>>>>> 294cba528a6197f937b28f118eef3304c872cffd
     res.render('A-Home');
 };
 
