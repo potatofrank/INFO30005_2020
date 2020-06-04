@@ -52,7 +52,11 @@ var createTotalCase = function(req, res, next) {
 var deleteTotalCase = function(req, res, next) {
     var id = req.body.id;
     console.log(id);
+<<<<<<< HEAD
     totalCase.findOneAndDelete(id).exec();
+=======
+    totalCase.findByIdAndDelete(id).exec();
+>>>>>>> 294cba528a6197f937b28f118eef3304c872cffd
     res.render('A-Home');
 };
 

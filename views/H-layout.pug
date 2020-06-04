@@ -5,6 +5,7 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-cale=1')
     link(rel='stylesheet', type='text/css', href='/stylesheets/homepage.css')
     title Team Ultra Protection
+<<<<<<< HEAD
     script(src='https://kit.fontawesome.com/d821761733.js', crossorigin='anonymous')
   script.
     function openSlideMenu() {
@@ -15,6 +16,24 @@ html(lang='en')
       document.getElementById('menu').style.width = '0';
       document.getElementById('content').style.marginLeft = '0';
     }
+=======
+    script(src= 'https://kit.fontawesome.com/d821761733.js', crossorigin='anonymous')
+    script(type='text/javascript', src='https://www.gstatic.com/charts/loader.js')
+    script(language="javascript", type='text/javascript', src = '/javascripts/myChart.js')
+    script.
+      function openSlideMenu() {
+        document.getElementById('menu').style.width = '200px';
+        document.getElementById('content').style.marginLeft = '200px';
+      }
+      function closeSlideMenu() {
+        document.getElementById('menu').style.width = '0';
+        document.getElementById('content').style.marginLeft = '0';
+      }
+
+
+
+
+>>>>>>> 294cba528a6197f937b28f118eef3304c872cffd
   body
     #content.wrapper
 
@@ -44,7 +63,7 @@ html(lang='en')
           i.fas.fa-comment-medical
           |   Ask For Advise
 
-        a(href='/log')
+        a(href='/login')
           i.fas.fa-user
           |   Login
 

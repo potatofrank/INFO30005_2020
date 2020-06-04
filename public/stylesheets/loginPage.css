@@ -58,6 +58,11 @@ h2{
   text-align: center;
 }
 
+h3 {
+  color: #5a5858;
+  text-align: center;
+}
+
 /* FORM */
 
 botton[type=button],
