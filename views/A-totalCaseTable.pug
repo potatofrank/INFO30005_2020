@@ -1,0 +1,42 @@
+extends A-layout
+
+block content
+    .main_content2
+        .insertTotal
+            h2 Add Overview Data
+            form(action = '/admin/insertTotal',method='post',name = 'totalCase',target = 'targetIfr')
+                fieldset
+                    legend Total Case Information
+                    br
+                    div.form-group
+                        label(for='Date') Date
+                        input#Date.form-controller(type = 'text',placeholder='dd,mm,yyyy',name = 'Date')
+                    br
+                    div.form-group
+                        label(for='Accumulate_Confirmed_Cases') Accumulate Confirmed Cases
+                        input#Accumulate_Confirmed_Cases.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Confirmed_Cases')
+                    br
+                    div.form-group
+                        label(for='Current_Existing_Cases') Current Existing Cases
+                        input#Current_Existing_Cases.form-controller(type = 'text',placeholder='digit',name = 'Current_Existing_Cases')
+                    br
+                    div.form-group
+                        label(for='Accumulate_Deaths') Accumulate Deaths
+                        input#Accumulate_Deaths.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Deaths')
+                    br
+                    div.form-group
+                        label(for='Accumulate_Cured_Cases') Accumulate Cured Cases
+                        input#Accumulate_Cured_Cases.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Cured_Cases')
+                    br
+                    button(onclick='showmsg()',type='submit') ADD
+        iframe(name = 'targetIfr',style='display:none')
+            br
+            br
+
+    #popup
+        | Successfully Submitted !!!
+        br
+        br
+        button.bt1(name='subject',onclick='closemsg()') Okay
+        br
+        br

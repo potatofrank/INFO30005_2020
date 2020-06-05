@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body{
+    background-image: url('../images/2644.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Josefin Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+table{
+    color: black;
+    text-align: center;
+    margin: auto;
+}
+
+.map{
+    width: 50%;
+    margin: auto;
+}
+
+.map :hover{
+    fill:#2E2EFE;
+}
+
+.sidebar{
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #6e94bc;
+    opacity: .9;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    box-shadow:
+            0 3.5px 3.6px rgba(0, 0, 0, 0.084),
+            0 9.6px 10px rgba(0, 0, 0, 0.12),
+            0 23.2px 24.1px rgba(0, 0, 0, 0.156),
+            0 77px 80px rgba(0, 0, 0, 0.24);
+
+}
+
+.sidebar a{
+    display: block;
+    padding: 20px 30px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #101013;
+}
+
+.sidebar a:hover{
+    color: #fff;
+    transition: 0.4s;
+}
+
+.sidebar .close{
+    position: absolute;
+    top: 0;
+    right: 22px;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.slide a{
+    float: left;
+    margin-right: 20px;
+    color: #2c2c32;
+    font-size: 30px;
+}
+
+#content{
+    transition: margin-left 0.5s;
+    overflow: hidden;
+    width: 100%;
+    margin-left: 200px;
+}
+
+.header{
+    width: 100%;
+    opacity: 90%;
+    height: 50px;
+    position: relative;
+    padding: 5px;
+    box-shadow:
+            0 2.4px 6.4px rgba(0, 0, 0, 0.121),
+            0 6.5px 17.7px rgba(0, 0, 0, 0.173),
+            0 15.7px 42.5px rgba(0, 0, 0, 0.21),
+            0 52px 141px rgba(0, 0, 0, 0.31);
+
+}
+
+.header h2{
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 30px;
+}
+
+.wrapper .main_content{
+    padding-top: 20px;
+}
+
+.contact_content {
+    background-image: url(http://www.freevectors.com/wp-content/uploads/2016/01/Vintage-Design-Pattern-Background-800x480.jpg); background-size: cover; background-repeat: no-repeat no-repeat; padding: 50px 0;}
+
+.contact_content h2 {
+    font-family: 'Raleway',sans-serif; font-size: 50px; background: #F0FFFF; color: #87CEFA; font-weight: bold; letter-spacing: -1px; line-height: 2; text-align: center;}
+
+.team_content{
+    font-family: tahoma;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    position: relative;
+}
+
+.team {
+    padding: 50px 20px 50px;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    background-color: #F0FFFF;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin: 0 10px;
+}
+.member.team{
+    padding-top: 0px;
+}
+
+.team.profile {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+}
+.team .profile::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: #1369ce;
+    position: absolute;
+    bottom: 150%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+}
+
+.team:hover .profile::before {
+    height: 100%;
+}
+
+.team .profile::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #1369ce;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.team .profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+    overflow: auto;
+}
+.team:hover .profile img {
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+}
+.team .email {
+    display: block;
+    font-size: 15px;
+    color: #4e5052;
+    text-transform: capitalize;
+}
+
+h1 {
+    text-align: center;
+    color: steelblue;
+}
+body {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRvb7ZXKNfWUqnkR286Up0eOAG4uaN0Zfh8M445ivtdDLVj-2cL&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.secretLi {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+th {
+    background-color: skyblue;
+}
+
+table{
+    width:800px;
+    height:100%;
+    background:#F0F8FF;
+    border-radius:10px;
+    box-shadow:0 0 40px -10px #4682B4;
+    margin:30px 20px 20px 220px;
+    padding:30px 30px;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+    position:relative
+}
+

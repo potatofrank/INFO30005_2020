@@ -1,0 +1,50 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/admin.css')
+        script(src='https://kit.fontawesome.com/d821761733.js', crossorigin='anonymous')
+        meta(name='viewport', content='width=device-width, initial-cale=1')
+        script(defer='', src='../controller/window.js')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+        script(src = '../controller/flexible')
+        script(type='text/javascript').
+                function showmsg() {
+                    document.getElementById('popup').style.display = 'block';
+                }
+
+                function closemsg(req,res,next) {
+                    document.getElementById('popup').style.display = 'none';
+                }
+
+    body
+        #content.wrapper
+            h1 Admin System
+            br
+            br
+
+            nav.sidebar
+                ul
+                    li
+                        a(href='/')
+                            i.fas.fa-home
+                            |   Home
+                    li
+                        a(href='/admin/loadData')
+                            i.fas.fa-sync-alt
+                            |    Load Data
+                    li
+                        a(href='/admin/singleTable')
+                            i.fas.fa-table
+                            |   Submit Patient Info
+                    li
+                        a(href='/admin/totalTable')
+                            i.fas.fa-table
+                            |   Submit Overview Data
+                    li
+                        a(href='/admin/logout')
+                            i.fas.fa-sign-out-alt
+                            |   Logout
+
+            block content
+
