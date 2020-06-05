@@ -1,52 +1,12 @@
-extends A-layout
+a(href='admin')
+    button Back
 
-block content
-
-    .main_content3
-        .delete
-            h2 Delete Patient Info
-            form(action='/admin/deleteSingle',method='post',name='singleCaseDelete')
-                fieldset
-                    legend Single Case ID
-                    br
-                    div.form-group
-                        label(for='id') ID
-                        input#id(type='text', name='id')
-                    br
-                    button(onclick='showmsg()',type='submit') DELETE
-                    br
-                    br
-                    h5 #{output2}
-
-        br
-        br
-        a(href='admin')
-            button Back
-        br
-        br
-        each Value in singleCases
-            table.center
-                tr
-                    th Name
-                    th Value
-                tr
-                    td id
-                    td #{Value._id}
-                tr
-                    td Gender
-                    td #{Value.Gender}
-                tr
-                    td Age
-                    td #{Value.Age}
-                tr
-                    td Symptoms
-                    td #{Value.Symptom}
-                tr
-                    td Confirmed_Date
-                    td #{Value.Confirmed_Date}
-                tr
-                    td Living_City
-                    td #{Value.Living_City}
-            br
-            br
-
+each Value in singleCases
+    h4 ----------------------
+    div id:#{Value._id}
+    div Gender: #{Value.Gender}
+    div Age: #{Value.Age}
+    div Symptoms: #{Value.Symptom}
+    div Confirmed_Date: #{Value.Confirmed_Date}
+    div Living_City: #{Value.Living_City}
+    h4 ----------------------

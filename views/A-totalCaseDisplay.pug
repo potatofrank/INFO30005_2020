@@ -1,48 +1,12 @@
-extends A-layout
+a(href='admin')
+    button Back
 
-block content
-    .main_content3
-        .delete
-            h2 #{output2}
-            h2 Delete Overview Data
-            form(action='/admin/deleteSingle',method='post',name='singleCaseDelete')
-                fieldset
-                    legend Total Case ID
-                    br
-                    div.form-group
-                        label(for='_id') ID
-                        input#_id(type='text', name='id')
-                        br
-                        button(onclick='showmsg()',type='submit') DELETE
-
-        br
-        br
-        a(href='admin')
-            button Back
-        br
-        br
-        each val in totalCases
-            table.center
-                tr
-                    th Name
-                    th Value
-                tr
-                    td id
-                    td #{val._id}
-                tr
-                    td Date
-                    td #{val.Date}
-                tr
-                    td Accumulate Confirmed Cases
-                    td #{val.Accumulate_Confirmed_Cases}
-                tr
-                    td Current Existing Cases
-                    td #{val.Current_Existing_Cases}
-                tr
-                    td Accumulate Deaths
-                    td #{val.Accumulate_Deaths}
-                tr
-                    td Accumulate Cured_Cases
-                    td #{val.Accumulate_Cured_Cases}
-            br
-            br
+each val in totalCases
+    h4 ----------------------
+     div Date: #{val.Date}
+     div id:#{val._id}
+     div Accumulate Confirmed Cases: #{val.Accumulate_Confirmed_Cases}
+     div Current Existing Cases: #{val.Current_Existing_Cases}
+     div Accumulate Deaths: #{val.Accumulate_Deaths}
+     div Accumulate Cured_Cases: #{val.Accumulate_Cured_Cases}
+     h4 ----------------------

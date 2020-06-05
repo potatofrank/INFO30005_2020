@@ -5,22 +5,16 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-cale=1')
     link(rel='stylesheet', type='text/css', href='/stylesheets/homepage.css')
     title Team Ultra Protection
-    script(src= 'https://kit.fontawesome.com/d821761733.js', crossorigin='anonymous')
-    script(type='text/javascript', src='https://www.gstatic.com/charts/loader.js')
-    script(language="javascript", type='text/javascript', src = '/javascripts/myChart.js')
-    script.
-      function openSlideMenu() {
-        document.getElementById('menu').style.width = '200px';
-        document.getElementById('content').style.marginLeft = '200px';
-      }
-      function closeSlideMenu() {
-        document.getElementById('menu').style.width = '0';
-        document.getElementById('content').style.marginLeft = '0';
-      }
-
-
-
-
+    script(src='https://kit.fontawesome.com/d821761733.js', crossorigin='anonymous')
+  script.
+    function openSlideMenu() {
+      document.getElementById('menu').style.width = '200px';
+      document.getElementById('content').style.marginLeft = '200px';
+    }
+    function closeSlideMenu() {
+      document.getElementById('menu').style.width = '0';
+      document.getElementById('content').style.marginLeft = '0';
+    }
   body
     #content.wrapper
 
@@ -34,7 +28,7 @@ html(lang='en')
         a.close(href='#', onclick='closeSlideMenu()')
           i.fas.fa-times
 
-        a(href='/')
+        a(href='/Home')
           i.fas.fa-home
           |   Home
 
@@ -50,7 +44,7 @@ html(lang='en')
           i.fas.fa-comment-medical
           |   Ask For Advise
 
-        a(href='/login')
+        a(href='/log')
           i.fas.fa-user
           |   Login
 
@@ -65,4 +59,6 @@ html(lang='en')
             i.fab.fa-twitter-square
           a(href='#')
             i.fab.fa-instagram
+
+
       block content

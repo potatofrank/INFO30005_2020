@@ -1,15 +1,15 @@
 var express = require('express');
 var router = express.Router();
 var totalCaseController = require('../controller/totalCaseController.js');
-var advisesController = require('../controller/advisesController.js');
-var utilities = require("./utility");
-/* GET home page.
-router.get('/', function(req, res, next) {
-  res.render('H-Home',{ title: 'Team Ultra Protection' });
-});*/
+var advisesController = require('../controller/advisesController');
 
-router.get('/login', utilities.isLoggedIn, function (req,res,next) {
-    res.render('A-Home', {username: 'Hello admin, Please enter the data'});
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('H-Home', { title: 'Team Ultra Protection' });
+});
+
+router.get('/log',function (req,res,next) {
+  res.render('loginPage', { title: 'Admin Login' });
 });
 
 router.get('/contact',function (req,res,next) {
@@ -32,8 +32,7 @@ router.get('/Home',function (req,res,next) {
   res.render('H-Home');
 });
 
-
-router.get('/', totalCaseController.findlatesttotalCase);
+router.get('/Home#', totalCaseController.findlatesttotalCase);
 
 router.post('/insertAdvise', advisesController.createAdvise);
 
