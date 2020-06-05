@@ -22,17 +22,17 @@ var createSingleCase = function(req, res, next) {
 
     var data = new singleCase(item);
     data.save();
-
+    //res.render('A-singleCaseTable')
+    res.status(200).send();
 };
 
 
 var deleteSingleCase = function(req, res, next) {
     //var id = new ObjectID(req.body.id);
-    var id = req.body.ObjectID;
+    var id = req.body.id;
     console.log(id);
-    singleCase.findOneAndDelete(id).exec();
-
-    //res.render('A-Home', {output2: 'Delete Successfully'});
+    singleCase.findByIdAndDelete(id).exec();
+    res.render('A-Home');
 };
 
 module.exports.findAllSingleCase = findAllSingleCase;

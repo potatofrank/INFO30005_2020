@@ -4,7 +4,7 @@ block content
     .main_content2
         .insertSingle
             h2 Add New Patient Info
-            form(action='/admin/insertSingle',method='post',name='singleCase')
+            form(action='/admin/insertSingle',method='post',name='singleCase', target = 'targetIfr')
                 fieldset
                     legend Single Case Information
                     br
@@ -65,33 +65,18 @@ block content
 
                     button(onclick='showmsg()',type='submit') ADD
                     h5 #{output1}
+        iframe(name = 'targetIfr',style='display:none')
             br
             br
 
 
-        .deleteSingle
-            h2 Delete Patient Info
-            form(action='/admin/deleteSingle',method='post',name='singleCaseDelete')
-                fieldset
-                    legend Single Case ID
-                    br
-                    div.form-group
-                        label(for='id') ID
-                        input#id(type='text', name='id')
-                    br
-                    button(onclick='showmsg()',type='submit') DELETE
-                    br
-                    br
-                    h5 #{output2}
 
-            br
-            br
 
 
     #popup
         | Successfully Submitted !!!
         br
         br
-        button.bt1(name='subject',onclick='closemsg()') Okay
+        button.bt1(name='subject',onclick='closemsg()',type='submit') Okay
         br
         br
