@@ -18,13 +18,11 @@ html
             form(method='POST' action="/users/login")
                 div
                     label User Name:
-                    input(type='text', placeholder='Enter username' name='username')
+                    input(type='text', placeholder='Enter username' name='name')
                 div
                     label Password:
-                    input(type='text', name='password',
-                            placeholder='Enter password')
+                    input(type='text', name='password', placeholder='Enter password')
                 br
                 button(type='submit') Login
-
 
             h3 #{error}
