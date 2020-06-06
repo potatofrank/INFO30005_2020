@@ -22,15 +22,17 @@ var findlatesttotalCase = function (req,res,next) {
 };
 
 var createTotalCase = function(req, res, next) {
-    var item = {
-        Date:req.body.Date,
-        Accumulate_Confirmed_Cases:req.body.Accumulate_Confirmed_Cases,
-        Current_Existing_Cases:req.body.Current_Existing_Cases,
-        Accumulate_Deaths:req.body.Accumulate_Deaths,
-        Accumulate_Cured_Cases:req.body.Accumulate_Cured_Cases
-    };
-    var data = new totalCase(item);
-    data.save();
+    if(req.body != null && req.body != '') {
+        var item = {
+            Date: req.body.Date,
+            Accumulate_Confirmed_Cases: req.body.Accumulate_Confirmed_Cases,
+            Current_Existing_Cases: req.body.Current_Existing_Cases,
+            Accumulate_Deaths: req.body.Accumulate_Deaths,
+            Accumulate_Cured_Cases: req.body.Accumulate_Cured_Cases
+        };
+        var data = new totalCase(item);
+        res.status(200).send();
+    }
     //res.render('A-totalCaseTable', {output1: 'Submit Successfully'});
 };
 

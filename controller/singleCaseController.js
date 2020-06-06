@@ -12,18 +12,26 @@ var findAllSingleCase = function(req, res, next) {
 };
 
 var createSingleCase = function(req, res, next) {
-    var item = {
-        Gender:req.body.Gender,
-        Age:req.body.Age,
-        Symptom:req.body.Symptom,
-        Confirmed_Date:req.body.Confirmed_Date,
-        Living_City:req.body.Living_City
-    };
+    var success = false;
+    if(req.body != null && req.body != '') {
+        var item = {
+            Gender: req.body.Gender,
+            Age: req.body.Age,
+            Symptom: req.body.Symptom,
+            Confirmed_Date: req.body.Confirmed_Date,
+            Living_City: req.body.Living_City
+        };
 
-    var data = new singleCase(item);
-    data.save();
+        var data = new singleCase(item);
+        data.save();
+        success = true;
+    }
+    else{
+        success = false;
+    }
+    console.log(success);
     //res.render('A-singleCaseTable')
-    res.status(200).send();
+    res.status(200).send({result: success});
 };
 
 

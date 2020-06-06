@@ -1,0 +1,27 @@
+extends H-layout
+
+block content
+        .search
+            if nomatch !== null
+                h1(id = 'searcherror') #{nomatch}
+            else
+                h6(id = 'search') Search results are:
+                h6(id = 'count') Number of cases in this area is #{counts}
+                each Patient in patient
+                    div(class = 'patient')
+                        table.center
+                            tr
+                                td Gender
+                                td #{Patient.Gender}
+                            tr
+                                td Age
+                                td #{Patient.Age}
+                            tr
+                                td Symptoms
+                                td #{Patient.Symptom}
+                            tr
+                                td Confirmed_Date
+                                td #{Patient.Confirmed_Date}
+                            tr
+                                td Living_City
+                                td #{Patient.Living_City}
