@@ -7,6 +7,7 @@ var findReqInfo = async function(req,res){
     var totalcount = 0;
     var date = "";
     var symptom = "";
+    var area = "";
     if(req.query.search){
         const regex = new RegExp(escapeRegex(req.query.search), 'i');
         console.log(regex);
@@ -20,10 +21,12 @@ var findReqInfo = async function(req,res){
             totalcount =  reqInfo.length;
             date = reqInfo[totalcount-1].Confirmed_Date;
             symptom = reqInfo[totalcount-1].Symptom;
+            area = reqInfo[1].Living_City;
             console.log(date);
         }
 
-        res.render('H-searchresult', {patient: reqInfo, nomatch: nomatch, counts: totalcount,newDate: date,newSymptom:symptom})
+        res.render('H-searchresult', {patient: reqInfo, nomatch: nomatch,
+            counts: totalcount,newDate: date,newSymptom:symptom, searchArea:area})
     }
     else {
         patients.find({},function (err,reqInfo) {
@@ -32,7 +35,8 @@ var findReqInfo = async function(req,res){
             }
             else{
 
-                res.render('H-searchresult',{patient: reqInfo, nomatch: nomatch, counts: totalcount,newDate: date,newSymptom:symptom})
+                res.render('H-searchresult',{patient: reqInfo, nomatch: nomatch,
+                    counts: totalcount,newDate: date,newSymptom:symptom,searchArea:area})
                 //console.log(reqInfo);
             }
 

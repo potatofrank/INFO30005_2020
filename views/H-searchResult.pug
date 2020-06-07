@@ -5,7 +5,7 @@ block content
             if nomatch !== null
                 h1(id = 'searcherror') #{nomatch}
             else
-                h6(id = 'search') Area Information:
+                h6(id = 'search') Current search Area :#{searchArea}
                 h6(id = 'count') Number of cases in this area : #{counts}
                 h6(id = 'date') Confirmed Date of latest case : #{newDate}
                 h6(id = 'Symptom') Symptom of the latest case : #{newSymptom}
