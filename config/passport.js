@@ -6,9 +6,7 @@ var userModel = require('../models/user.js');
 
 var userInfo = [
     {'local.name':'admin', 'local.password':'admin'},
-    {'local.name':'RoyalHospital','local.password':'RoyalHospital'},
-    {'local.name':'HospitalOfChildren','local.password':'HospitalOfChildren'},
-    {'local.name':'Unimelb','local.password':'Unimelb'},
+
 ];
 
 userModel.create(userInfo,

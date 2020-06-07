@@ -1,12 +1,11 @@
 const cors = require('cors');
 const passport = require('passport');
 const flash = require('connect-flash-plus');
-
+const session = require('express-session');
 const jwt = require('jsonwebtoken');
 var bcrypt = require("bcrypt");
 var createError = require('http-errors');
 var express = require('express');
-const bodyParser = require("body-parser");
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -20,19 +19,13 @@ var adminRouter = require('./routes/admin');
 
 var app = express();
 
-// use the body-parser middleware, which parses request bodies into req.body
-// support parsing of json
-app.use(bodyParser.json());
-// support parsing of urlencoded bodies (e.g. for forms)
-app.use(bodyParser.urlencoded({ extended: true }));
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 
 
-
+app.use(session(({ secret:'iAmFather'})));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());

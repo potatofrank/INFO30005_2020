@@ -64,4 +64,19 @@ block content
                         br
 
                     button(onclick='showmsg()',type='submit') ADD
-                    h3 #{output}
+                    h5 #{output1}
+        iframe(name = 'targetIfr',style='display:none')
+            br
+            br
+
+
+
+
+
+    #popup
+        | Successfully Submitted !!!
+        br
+        br
+        button.bt1(name='subject',onclick='closemsg()',type='submit') Okay
+        br
+        br
