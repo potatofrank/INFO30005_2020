@@ -4,7 +4,7 @@ block content
     .main_content2
         .insertSingle
             h2 Add New Patient Info
-            form(action='/admin/insertSingle',method='post',name='singleCase', target = 'targetIfr')
+            form(action='/admin/insertSingle',method='post',name='singleCase')
                 fieldset
                     legend Single Case Information
                     br
@@ -64,4 +64,18 @@ block content
                         br
 
                     button(onclick='showmsg()',type='submit') ADD
-                    h3 #{output}
+                    h5 #{output1}
+            br
+            br
+
+
+
+
+
+    #popup
+        | Successfully Submitted !!!
+        br
+        br
+        button.bt1(name='subject',onclick='closemsg()') Okay
+        br
+        br

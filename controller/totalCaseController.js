@@ -23,21 +23,20 @@ var findlatesttotalCase = function (req,res,next) {
 
 var createTotalCase = function(req, res, next) {
     var item = {
-        Date: req.body.Date,
-        Accumulate_Confirmed_Cases: req.body.Accumulate_Confirmed_Cases,
-        Current_Existing_Cases: req.body.Current_Existing_Cases,
-        Accumulate_Deaths: req.body.Accumulate_Deaths,
-        Accumulate_Cured_Cases: req.body.Accumulate_Cured_Cases
+        Date:req.body.Date,
+        Accumulate_Confirmed_Cases:req.body.Accumulate_Confirmed_Cases,
+        Current_Existing_Cases:req.body.Current_Existing_Cases,
+        Accumulate_Deaths:req.body.Accumulate_Deaths,
+        Accumulate_Cured_Cases:req.body.Accumulate_Cured_Cases
     };
     var data = new totalCase(item);
-    res.status(200).send();
+    data.save();
     //res.render('A-totalCaseTable', {output1: 'Submit Successfully'});
-    res.status(200).send({});
 };
 
 
 var deleteTotalCase = function(req, res, next) {
-    var id = req.body.id;
+    var id = req.body._id;
     console.log(id);
     totalCase.findByIdAndDelete(id).exec();
     res.render('A-Home');
