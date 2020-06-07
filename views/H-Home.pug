@@ -4,29 +4,28 @@ block content
             script(src="../controller/totalCaseController")
             .main_content
                 .table
-                    each value in overview
-                        table.center
-                            tr
-                                th Date
-                                th Accumulate Confirmed Cases
-                                th Accumulate Deaths
-                                th Current Existing Cases
-                                th Accumulate Cured Cases
-                            tr
-                                td #{value.Date}
-                                td #{value.Accumulate_Confirmed_Cases}
-                                td #{value.Accumulate_Deaths}
-                                td #{value.Current_Existing_Cases}
-                                td #{value.Accumulate_Cured_Cases}
+                    table.center
+                        tr
+                            th Accumulate Confirmed Cases
+                        tr
+
+                            td #{Accumulate_Confirmed_Cases}
 
                 br
                 br
+
+                form(method = 'get' action = '/search')
+                    div(class = "search-bar")
+                        input(type='text' name="search" placeholder='City of XXXXX' required= 'true')
+                        button(type = 'submit') Search
 
 
                 div
                     filedset
                         .map
-                            svg#svg2(xmlns:dc='http://purl.org/dc/elements/1.1/', xmlns:cc='http://creativecommons.org/ns#', xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#', xmlns:svg='http://www.w3.org/2000/svg', xmlns='http://www.w3.org/2000/svg', xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd', xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape', version='1.0', viewBox='0 0 1554.2206 1236.0227', xml:space='preserve', inkscape:version='0.47 r22583', sodipodi:docname='Australia_Victoria_location_map.svg')
+                            svg#svg2(xmlns:dc='http://purl.org/dc/elements/1.1/',
+                                xmlns:cc='http://creativecommons.org/ns#',
+                                xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#', xmlns:svg='http://www.w3.org/2000/svg', xmlns='http://www.w3.org/2000/svg', xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd', xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape', version='1.0', viewBox='0 0 1554.2206 1236.0227', xml:space='preserve', inkscape:version='0.47 r22583', sodipodi:docname='Australia_Victoria_location_map.svg')
                                 metadata#metadata157
                                     rdf:rdf
                                         cc:work(rdf:about='')

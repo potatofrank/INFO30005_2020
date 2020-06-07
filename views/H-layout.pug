@@ -6,7 +6,8 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='/stylesheets/homepage.css')
     title Team Ultra Protection
     script(src= 'https://kit.fontawesome.com/d821761733.js', crossorigin='anonymous')
-    script(src = '../controller/myChart.js')
+    script(type='text/javascript', src='https://www.gstatic.com/charts/loader.js')
+    script(language="javascript", type='text/javascript', src = '/javascripts/myChart.js')
     script.
       function openSlideMenu() {
         document.getElementById('menu').style.width = '200px';
@@ -16,37 +17,9 @@ html(lang='en')
         document.getElementById('menu').style.width = '0';
         document.getElementById('content').style.marginLeft = '0';
       }
-    script(type='text/javascript', src='https://www.gstatic.com/charts/loader.js')
-    script(type='text/javascript').
-      google.charts.load("current", {packages: ["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ["Element", "NumOfCases", {role: "style"}],
-          ["0-25", 80, "#F92C00"],
-          ["26-50", 170, "#EA6A06"],
-          ["51-75", 320, "#FCF402"],
-          ["Over 75", 160, "#7BFC02"]
-        ]);
-        var view = new google.visualization.DataView(data);
-        view.setColumns([0, 1,
-          {
-            calc: "stringify",
-            sourceColumn: 1,
-            type: "string",
-            role: "annotation"
-          },
-          2]);
-        var options = {
-          title: "The Number of different group of age people caught COVID-19",
-          width: 600,
-          height: 400,
-          bar: {groupWidth: "95%"},
-          legend: {position: "none"},
-        };
-        var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
-        chart.draw(view, options);
-      }
+
+
+
 
   body
     #content.wrapper
@@ -65,10 +38,6 @@ html(lang='en')
           i.fas.fa-home
           |   Home
 
-        a(href='/charts')
-          i.fas.fa-chart-line
-          |   Charts
-
         a(href='/healthTips')
           i.fas.fa-file-medical
           |    Health Tips
@@ -77,9 +46,9 @@ html(lang='en')
           i.fas.fa-comment-medical
           |   Ask For Advise
 
-        a(href='/log')
+        a(href='/login')
           i.fas.fa-user
-          |   Login
+          |   Admin System
 
         a(href='/contact')
           i.fas.fa-id-card
