@@ -67,6 +67,8 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.listen(process.env.PORT || 80, ()=> {console.log('App is running');});
+app.listen(process.env.PORT || 3000, () => {
+  console.log("The app is running!");
+});
 
 module.exports = app;
