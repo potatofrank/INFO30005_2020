@@ -2,13 +2,14 @@ extends H-layout
 
 block content
     .box
+
     section.mainbox
         .column
             .panel.bar
                 h2
                 | Bar Graph
+                #barchart_values(style='width: 900px; height: 300px;')
                 .chart
-                    #barchart_values(style='width: 900px; height: 300px;')
                 .panel-footer
             .panel.line
                 h2
