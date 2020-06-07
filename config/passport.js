@@ -4,8 +4,11 @@ const LocalStrategy = require('passport-local').Strategy;
 
 var userModel = require('../models/user.js');
 
+
+
+//create the UserModel for userinformaion
 var userInfo = [
-    {'local.name':'admin', 'local.password':'admin'},
+    {'local.username':'admin','local.password':'admin'},
 
 ];
 
@@ -43,10 +46,12 @@ module.exports = function(passport) {
                         return done(err);
                     if (!user)
                         return done(null, false, req.flash('LoginMessage', 'No username found.'));
+
                     if (!user.validPassword(password))
-                        return done(null, false, req.flash('LoginMessage', 'Oops! Incorrect password.'));
+                        return done(null, false, req.flash('LoginMessage', 'Oops!Incorrect password.'));
                     else {
                         req.session.username = username;
+                        console.log('login successfuly');
                         console.log(req.session);
                         return done(null, user, req.flash('LoginMessage', 'Login successful.'));
                     }
