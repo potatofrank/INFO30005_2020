@@ -217,26 +217,3 @@ nav ul li a:hover{
 .main_content3 tr:nth-child(even) {
     background-color: #b6d9f1;
 }
-
-.delete
-{
-    width:400px;
-    height:100%;
-    background:#F0F8FF;
-    border-radius:10px;
-    box-shadow:0 0 40px -10px #4682B4;
-    margin:calc(50vh - 280px) auto;
-    padding:30px 30px;
-    max-width:calc(100vw - 40px);
-    box-sizing:border-box;
-    font-family:'Montserrat',sans-serif;
-    position:relative
-}
-label{
-    font-family:'Montserrat',sans-serif;font-size: 15px;
-    color:#778899;
-}
-legend{
-    font-family:'Montserrat',sans-serif;
-    color: #708090;
-}

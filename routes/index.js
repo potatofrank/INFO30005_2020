@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
   res.render('H-Home',{ title: 'Team Ultra Protection' });
 });*/
 
-router.get('/login',function (req,res,next) {
+router.get('/log',function (req,res,next) {
   res.render('loginPage', { title: 'Admin Login' });
 });
 

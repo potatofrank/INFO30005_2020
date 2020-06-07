@@ -5,7 +5,6 @@ var totalCaseController = require('../controller/totalCaseController.js');
 var advisesController = require('../controller/advisesController.js');
 
 
-
 router.get('/admin', function(req, res, next) {
     res.render('A-Home', {username: 'Hello admin, Please enter the data'});
 });

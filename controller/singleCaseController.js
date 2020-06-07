@@ -28,10 +28,11 @@ var createSingleCase = function(req, res, next) {
 
 var deleteSingleCase = function(req, res, next) {
     //var id = new ObjectID(req.body.id);
-    var id = req.body._id;
+    var id = req.body.ObjectID;
     console.log(id);
-    singleCase.findByIdAndDelete(id).exec();
-    res.render('A-Home');
+    singleCase.findOneAndDelete(id).exec();
+
+    //res.render('A-Home', {output2: 'Delete Successfully'});
 };
 
 module.exports.findAllSingleCase = findAllSingleCase;
