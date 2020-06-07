@@ -13,7 +13,7 @@ html
                     document.getElementById('popup').style.display = 'block';
                 }
 
-                function closemsg() {
+                function closemsg(req,res,next) {
                     document.getElementById('popup').style.display = 'none';
                 }
 
@@ -41,6 +41,10 @@ html
                         a(href='/admin/totalTable')
                             i.fas.fa-table
                             |   Submit Overview Data
+                    li
+                        a(href='/admin/logout')
+                            i.fas.fa-sign-out-alt
+                            |   Logout
 
             block content
 
