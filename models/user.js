@@ -6,23 +6,18 @@ const bcrypt = require('bcrypt-nodejs');
 var userSchema = new Schema({
     local: {
         name: {type: String, unique: true, required: true,},
-        password: {type: String,
-            required: true,
-            set:(val) =>{
-                return bcrypt.hashSync(val,bcrypt.genSaltSync(10),null);
-            }
-            },
+        password: {type: String, required: true,},
     }}, {collection:'users'});
 
 
 
 //generating a hash
 userSchema.methods.generateHash = function(password){
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(10), null);
+    return bcrypt.hashSync(password,bcrypt.genSaltSync(10), null);
 };
 
 // checks if passwords is valid
 userSchema.methods.validPassword=function(password){
-    return bcrypt.compareSync(password,this.local.password);
+    return bcrypt.compareSync(password,this.generateHash(this.local.password));
 };
 module.exports = mongoose.model('users', userSchema);

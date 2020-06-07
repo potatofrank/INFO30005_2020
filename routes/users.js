@@ -3,17 +3,13 @@ var router = express.Router();
 const passport = require('passport');
 
 router.get('/login', function(req,res,next) {
-  res.render('loginPage', {error:"Invalid username or password! Try again!"});
-});
-
-router.get('/log', function(req,res,next) {
-  res.render('loginPage');
+  res.render('loginPage', {error:"1"});
 });
 
 
 router.post('/login', passport.authenticate('local-login',{
   successRedirect: '/admin/admin',
-  failureRedirect: '/users/login',
+  failureRedirect: '/login',
   failureFlash: true
 }));
 

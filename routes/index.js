@@ -2,14 +2,14 @@ var express = require('express');
 var router = express.Router();
 var totalCaseController = require('../controller/totalCaseController.js');
 var advisesController = require('../controller/advisesController.js');
-var utilities = require("./utility");
+
 /* GET home page.
 router.get('/', function(req, res, next) {
   res.render('H-Home',{ title: 'Team Ultra Protection' });
 });*/
 
-router.get('/login', utilities.isLoggedIn, function (req,res,next) {
-    res.render('A-Home', {username: 'Hello admin, Please enter the data'});
+router.get('/login',function (req,res,next) {
+  res.render('loginPage', { title: 'Admin Login' });
 });
 
 router.get('/contact',function (req,res,next) {
