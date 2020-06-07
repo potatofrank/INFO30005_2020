@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var totalCaseController = require('../controller/totalCaseController.js');
+var singleCaseController = require('../controller/singleCaseController.js');
 var advisesController = require('../controller/advisesController.js');
 var searchInfo = require('../controller/search.js');
 var utilities = require("./utility");
@@ -37,7 +37,7 @@ router.get('/Home',function (req,res,next) {
 router.get('/search', searchInfo.findReqInfo);
 
 
-router.get('/', totalCaseController.findlatesttotalCase);
+router.get('/', singleCaseController.table);
 
 router.post('/insertAdvise', advisesController.createAdvise);
 

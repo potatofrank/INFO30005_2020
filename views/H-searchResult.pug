@@ -5,23 +5,8 @@ block content
             if nomatch !== null
                 h1(id = 'searcherror') #{nomatch}
             else
-                h6(id = 'search') Search results are:
-                h6(id = 'count') Number of cases in this area is #{counts}
-                each Patient in patient
-                    div(class = 'patient')
-                        table.center
-                            tr
-                                td Gender
-                                td #{Patient.Gender}
-                            tr
-                                td Age
-                                td #{Patient.Age}
-                            tr
-                                td Symptoms
-                                td #{Patient.Symptom}
-                            tr
-                                td Confirmed_Date
-                                td #{Patient.Confirmed_Date}
-                            tr
-                                td Living_City
-                                td #{Patient.Living_City}
+                h6(id = 'search') Area Information:
+                h6(id = 'count') Number of cases in this area : #{counts}
+                h6(id = 'date') Confirmed Date of latest case : #{newDate}
+                h6(id = 'Symptom') Symptom of the latest case : #{newSymptom}
+

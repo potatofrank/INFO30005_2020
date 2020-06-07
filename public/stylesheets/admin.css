@@ -74,6 +74,13 @@ h1{
     color:#B0C4DE;
     border-bottom:3px solid #B0C4DE;
 }
+.main_content2 h3{ margin:40px 30px;
+    padding-bottom:0px;
+    width:180px;
+    color: #fa0000;
+    border-bottom:3px solid #f10000;
+}
+
 
 .main_content2 h5{ margin:40px 30px;
     padding-bottom:0px;

@@ -1,19 +1,29 @@
 var mongoose = require('mongoose');
 var patients = mongoose.model('singleCaseInfo')
 
+
 var findReqInfo = async function(req,res){
     var nomatch = null;
-    var count = 0;
+    var totalcount = 0;
+    var date = "";
+    var symptom = "";
     if(req.query.search){
-        const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+        const regex = new RegExp(escapeRegex(req.query.search), 'i');
         console.log(regex);
         const reqInfo = await patients.find({Living_City: regex});
-        count =  reqInfo.length;
         //console.log(reqInfo);
         if(reqInfo.length < 1){
-            nomacth = 'No search result, please search other cities.';
+            nomatch = 'No search result, please search other cities.';
         }
-        res.render('H-searchresult', {patient: reqInfo, nomatch:nomatch,counts: count})
+
+        else{
+            totalcount =  reqInfo.length;
+            date = reqInfo[totalcount-1].Confirmed_Date;
+            symptom = reqInfo[totalcount-1].Symptom;
+            console.log(date);
+        }
+
+        res.render('H-searchresult', {patient: reqInfo, nomatch: nomatch, counts: totalcount,newDate: date,newSymptom:symptom})
     }
     else {
         patients.find({},function (err,reqInfo) {
@@ -21,7 +31,8 @@ var findReqInfo = async function(req,res){
                 console.log(err);
             }
             else{
-                res.render('H-searchresult',{patient: reqInfo, nomatch: nomatch, counts: count});
+
+                res.render('H-searchresult',{patient: reqInfo, nomatch: nomatch, counts: totalcount,newDate: date,newSymptom:symptom})
                 //console.log(reqInfo);
             }
 
@@ -29,7 +40,9 @@ var findReqInfo = async function(req,res){
     }
 };
 
+
 function escapeRegex(text) {
+
     return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
 };
 

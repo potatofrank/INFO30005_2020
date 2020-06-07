@@ -18,7 +18,10 @@ table{
 
 .map{
     width: 50%;
-    margin: auto;
+    margin-top: 200px;
+    margin-left: 250px;
+    position: relative;
+
 }
 
 .map :hover{
@@ -279,4 +282,57 @@ h3{
     color:#778899;
     text-align: center;
 }
-؀
+
+.search-bar {
+    width: 50%;
+    position: relative;
+    display: flex;
+    margin: auto;
+    padding-left: 200px;
+}
+
+input {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+input:focus{
+    color: #00B4CC;
+}
+
+button {
+    width: 30%;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search-bar{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h6{
+    font-size: 25px;
+    color: steelblue;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-right: 100px;
+    font-family: 'Roboto', sans-serif;
+}
