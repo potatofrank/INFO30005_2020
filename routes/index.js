@@ -1,10 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var singleCaseController = require('../controller/singleCaseController.js');
+var totalCaseController = require('../controller/totalCaseController.js');
 var advisesController = require('../controller/advisesController.js');
-var searchInfo = require('../controller/search.js');
 var utilities = require("./utility");
-
 /* GET home page.
 router.get('/', function(req, res, next) {
   res.render('H-Home',{ title: 'Team Ultra Protection' });
@@ -34,10 +32,8 @@ router.get('/Home',function (req,res,next) {
   res.render('H-Home');
 });
 
-router.get('/search', searchInfo.findReqInfo);
 
-
-router.get('/', singleCaseController.table);
+router.get('/', totalCaseController.findlatesttotalCase);
 
 router.post('/insertAdvise', advisesController.createAdvise);
 

@@ -1,11 +1,10 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-
 var singleCaseSchema = new Schema({
     Gender: {type: String, required: true, enum:['Male','Female','Other'] },
     Age: {type:String, require:true},
-    Symptom:{type:String, require:true},
+    Symptom:{type:Array, require:true},
     Confirmed_Date: {type:String, require:true},
     Living_City: {type:String, enum : ['City of Melbourne','City of Port Phillip','City of Yarra','City of Banyule','City of Darebin','City of Hume'
         ,'City of Moreland','Shire of Nillumbik','City of Whittlesea','City of Boroondara','City of Knox','City of Manningham','City of Maroondah','City of Whitehorse'
