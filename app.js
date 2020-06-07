@@ -1,7 +1,7 @@
 const cors = require('cors');
 const passport = require('passport');
 const flash = require('connect-flash-plus');
-const session = require('express-session');
+
 const jwt = require('jsonwebtoken');
 var bcrypt = require("bcrypt");
 var createError = require('http-errors');
@@ -32,7 +32,7 @@ app.set('view engine', 'pug');
 
 
 
-app.use(session(({ secret:'iAmFather'})));
+
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
