@@ -2,13 +2,13 @@ extends H-layout
 
 block content
     .box
+
     section.mainbox
         .column
             .panel.bar
                 h2
                 | Bar Graph
                 .chart
-                    #barchart_values(style='width: 900px; height: 300px;')
                 .panel-footer
             .panel.line
                 h2
@@ -21,4 +21,4 @@ block content
                 .chart
                 .panel-footer
 
-
+    script(src = '../controller/echarts.min.js')

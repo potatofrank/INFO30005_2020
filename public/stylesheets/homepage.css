@@ -1,28 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 body{
-    background-image: url('../images/2644.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     font-family: 'Josefin Sans', sans-serif;
     overflow-x: hidden;
-}
-
-table{
-    color: black;
-    text-align: center;
-    margin: auto;
-}
-
-.map{
-    width: 50%;
-    margin: auto;
-}
-
-.map :hover{
-    fill:#2E2EFE;
 }
 
 .sidebar{
@@ -82,7 +62,7 @@ table{
 
 .header{
     width: 100%;
-    opacity: 90%;
+
     height: 50px;
     position: relative;
     padding: 5px;
@@ -191,34 +171,11 @@ table{
     text-transform: capitalize;
 }
 
-h1 {
-    text-align: center;
-    color: steelblue;
-}
-body {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRvb7ZXKNfWUqnkR286Up0eOAG4uaN0Zfh8M445ivtdDLVj-2cL&usqp=CAU");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.secretLi {
-    font-size: 20px;
-    letter-spacing: 2px;
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: pink;
 }
 
-th {
-    background-color: skyblue;
-}
 
-table{
-    width:800px;
-    height:100%;
-    background:#F0F8FF;
-    border-radius:10px;
-    box-shadow:0 0 40px -10px #4682B4;
-    margin:30px 20px 20px 220px;
-    padding:30px 30px;
-    box-sizing:border-box;
-    font-family:'Montserrat',sans-serif;
-    position:relative
-}
 

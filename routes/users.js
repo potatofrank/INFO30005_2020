@@ -1,20 +1,19 @@
 var express = require('express');
 var router = express.Router();
-const passport = require('passport');
+var login = require('../controller/authenticate/login.js');
 
-router.get('/login', function(req,res,next) {
-  res.render('loginPage', {error:"Invalid username or password! Try again!"});
+router.post('/login',function (req,res,next){
+
+  const username =  req.body.username;
+  var loginResult = login(username, req.body.password);
+  if(loginResult){
+    res.render('A-Home');
+
+  }
+  else {
+    res.render('loginPage',{error: 'Error: Please enter valid username or password !!!'});
+  }
 });
 
-router.get('/log', function(req,res,next) {
-  res.render('loginPage');
-});
-
-
-router.post('/login', passport.authenticate('local-login',{
-  successRedirect: '/admin/admin',
-  failureRedirect: '/users/login',
-  failureFlash: true
-}));
 
 module.exports = router;

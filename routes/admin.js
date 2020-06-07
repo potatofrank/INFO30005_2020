@@ -3,19 +3,11 @@ var router = express.Router();
 var singleCaseController = require('../controller/singleCaseController.js');
 var totalCaseController = require('../controller/totalCaseController.js');
 var advisesController = require('../controller/advisesController.js');
-const flash = require('connect-flash-plus');
-
 
 
 router.get('/admin', function(req, res, next) {
     res.render('A-Home', {username: 'Hello admin, Please enter the data'});
 });
-
-router.get('/logout',function (req,res) {
-    req.logout();
-    req.flash('');
-    res.redirect('/');
-})
 
 router.get('/get-SingleDate', singleCaseController.findAllSingleCase);
 

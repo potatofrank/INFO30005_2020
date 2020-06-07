@@ -4,7 +4,7 @@ block content
     .main_content2
         .insertTotal
             h2 Add Overview Data
-            form(action = '/admin/insertTotal',method='post',name = 'totalCase',target = 'targetIfr')
+            form(action = '/admin/insertTotal',method='post',name = 'totalCase')
                 fieldset
                     legend Total Case Information
                     br
@@ -29,10 +29,24 @@ block content
                         input#Accumulate_Cured_Cases.form-controller(type = 'text',placeholder='digit',name = 'Accumulate_Cured_Cases')
                     br
                     button(onclick='showmsg()',type='submit') ADD
-        iframe(name = 'targetIfr',style='display:none')
+
             br
             br
 
+        .deleteTotal
+            h2 Delete Overview Data
+            form(action='/admin/deleteSingle',method='post',name='singleCaseDelete')
+                fieldset
+                    legend Total Case ID
+                    br
+                    div.form-group
+                        label(for='_id') ID
+                        input#_id(type='text', name='id')
+                        br
+                        button(onclick='showmsg()',type='submit') DELETE
+
+            br
+            br
     #popup
         | Successfully Submitted !!!
         br
