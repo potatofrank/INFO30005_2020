@@ -18,8 +18,8 @@ table{
 
 .map{
     width: 50%;
-    margin-top: 200px;
-    margin-left: 250px;
+    margin-top: 10%;
+    margin-left: 18%;
     position: relative;
 
 }
@@ -218,11 +218,11 @@ table{
     background:#F0F8FF;
     border-radius:10px;
     box-shadow:0 0 40px -10px #4682B4;
-    margin:30px 20px 20px 220px;
+    margin:50px 50px 50px 300px;
     padding:30px 30px;
     box-sizing:border-box;
     font-family:'Montserrat',sans-serif;
-    position:relative
+    position:relative;
 }
 
 body {
@@ -287,8 +287,10 @@ h3{
     width: 50%;
     position: relative;
     display: flex;
-    margin: auto;
-    padding-left: 200px;
+    margin-left: 15%;
+    text-align: center;
+    top: 60%;
+    padding:30px 30px;
 }
 
 input {
@@ -318,13 +320,7 @@ button {
     font-size: 20px;
 }
 
-.search-bar{
-    width: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 
 h6{
     font-size: 25px;
