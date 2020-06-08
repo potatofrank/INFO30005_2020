@@ -25,7 +25,7 @@ var findReqInfo = async function(req,res){
             console.log(date);
         }
 
-        res.render('H-searchresult', {patient: reqInfo, nomatch: nomatch,
+        res.render('H-searchResult', {patient: reqInfo, nomatch: nomatch,
             counts: totalcount,newDate: date,newSymptom:symptom, searchArea:area})
     }
     else {
@@ -35,7 +35,7 @@ var findReqInfo = async function(req,res){
             }
             else{
 
-                res.render('H-searchresult',{patient: reqInfo, nomatch: nomatch,
+                res.render('H-searchResult',{patient: reqInfo, nomatch: nomatch,
                     counts: totalcount,newDate: date,newSymptom:symptom,searchArea:area})
                 //console.log(reqInfo);
             }
